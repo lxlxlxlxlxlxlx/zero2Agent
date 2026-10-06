@@ -17,7 +17,7 @@ Agent Demo 能完成一次工具调用，不代表它能承受 Worker 重启、�
 
 ## Q：一次 Agent 请求的完整执行链路是什么？
 
-> 来源：[字节跳动 Agent 后端开发业务终面](https://www.nowcoder.com/feed/main/detail/1dd33c4b7bda453a82f7d645bde7f3ff) / [阿里控股 Agent Infra 二面](https://www.nowcoder.com/feed/main/detail/627844d5923149b6ac46a631b2b41d5a) / Agent Runtime 完整管线设计高频题【字节火山引擎 Managed Agent 一面同题】【阿里 Agent Infra 一面题库同题】【[深信服Agent开发实习生一面二面，长时间被吊着，最终被横向掉了](https://www.nowcoder.com/feed/main/detail/14b2c379ae434062a009aefea9fc5df9)追问：处理流程可以讲一下吗？整体链路是怎样的？】【[百度Agent一面](https://www.nowcoder.com/feed/main/detail/72858aade19d443facc870fea8bb134f)追问：如果问某上市公司去年毛利率下降，Agent 收到 Prompt 后的完整流程是什么？】；本轮追问：一个用户请求进入系统后，Skill 的完整诊断流程是什么？（[本轮追问](https://www.nowcoder.com/discuss/926528416512315392)）；[本轮来源](https://www.nowcoder.com/discuss/927597050630270976)；本轮追问：介绍一下 AI 问数平台的整体架构和链路。（[本轮追问](https://www.nowcoder.com/feed/main/detail/14fe3975c0464b02bb58b24be1b63a21)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；本轮追问：工具执行器这块能不能再展开讲一下？（[本轮追问](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)）；本轮追问：从用户上传视频到最终拿到分析结果，完整链路是什么？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)）；本轮追问：DeepAgents 的结构是怎么样的？它的主流程和核心部分是什么？（[本轮追问](https://www.nowcoder.com/feed/main/detail/fbd28b541e1b4f498a58e84efb7314cf)）；[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)；[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)
+> 来源：[字节跳动 Agent 后端开发业务终面](https://www.nowcoder.com/feed/main/detail/1dd33c4b7bda453a82f7d645bde7f3ff) / [阿里控股 Agent Infra 二面](https://www.nowcoder.com/feed/main/detail/627844d5923149b6ac46a631b2b41d5a) / Agent Runtime 完整管线设计高频题【字节火山引擎 Managed Agent 一面同题】【阿里 Agent Infra 一面题库同题】【[深信服Agent开发实习生一面二面，长时间被吊着，最终被横向掉了](https://www.nowcoder.com/feed/main/detail/14b2c379ae434062a009aefea9fc5df9)追问：处理流程可以讲一下吗？整体链路是怎样的？】【[百度Agent一面](https://www.nowcoder.com/feed/main/detail/72858aade19d443facc870fea8bb134f)追问：如果问某上市公司去年毛利率下降，Agent 收到 Prompt 后的完整流程是什么？】；本轮追问：一个用户请求进入系统后，Skill 的完整诊断流程是什么？（[本轮追问](https://www.nowcoder.com/discuss/926528416512315392)）；[本轮来源](https://www.nowcoder.com/discuss/927597050630270976)；本轮追问：介绍一下 AI 问数平台的整体架构和链路。（[本轮追问](https://www.nowcoder.com/feed/main/detail/14fe3975c0464b02bb58b24be1b63a21)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；本轮追问：工具执行器这块能不能再展开讲一下？（[本轮追问](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)）；本轮追问：从用户上传视频到最终拿到分析结果，完整链路是什么？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)）；本轮追问：DeepAgents 的结构是怎么样的？它的主流程和核心部分是什么？（[本轮追问](https://www.nowcoder.com/feed/main/detail/fbd28b541e1b4f498a58e84efb7314cf)）；[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)；[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)
 
 **新手答**：“用户请求模型，模型调用工具，拿到结果后继续推理。”
 
@@ -233,6 +233,38 @@ Driver 提交 Task/Actor，Raylet 按资源和放置约束调度 Worker，GCS �
 
 ---
 
+## Q：大量本地端 Agent 与云端 Agent 如何协同？身份、状态、离线和任务迁移边界怎么设计？
+
+> 来源：[小红书 Agent 开发二面](https://www.nowcoder.com/feed/main/detail/9f7361c709f4413396988b4f334a0d6f) / [互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)；本轮追问：当前 Agent 在本地运行，如果迁移到云端或服务器，整体架构应该如何设计？可以分成哪些层？还需要补充什么？（[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)）；[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)
+
+**新手答**：“端侧断网时先缓存，联网后同步到云端；复杂任务都放云上跑。”
+
+**高手答**：
+
+先按数据所有权拆分，不能做一个“双向同步所有状态”的大接口：
+
+| 状态 | 权威方 | 离线策略 |
+|------|--------|----------|
+| 用户身份、授权和配额 | 云端控制面 | 端侧持有短期、限定 scope 的快照，过期后降权或停止高风险动作 |
+| 设备能力、实时传感器和本地文件 | 端侧 | 本地读取，按最小必要原则上传摘要或 Artifact 引用 |
+| Run 事件、Checkpoint 和副作用 | 创建该 Run 的控制面 | 用单调序号、幂等键和 lease 同步，不能靠最后写入覆盖 |
+| 模型、Prompt、Tool 和策略版本 | 云端发布面 | 端侧缓存已签名版本，离线期间固定版本运行 |
+
+断网时端侧只能执行预先授权、可撤销、风险受限的动作，并把事件写入有界本地队列。恢复连接后先做身份续期和版本协商，再按 `run_id + event_seq + execution_id` 上传；服务端逐条确认，重复事件幂等吸收，冲突进入显式仲裁。KubeEdge 的 [EdgeHub](https://kubeedge.io/docs/architecture/edge/edgehub/)和 [Device Controller](https://kubeedge.io/docs/architecture/cloud/device_controller/)展示了端云连接、上/下行状态和 desired/reported state 分离，但 Agent 的用户授权与副作用语义仍需业务层自己实现。
+
+任务迁移只在语义 Checkpoint 处发生：冻结旧执行者、提交工作区/Artifact 清单、释放 lease，新执行者取得 fencing token 后校验模型与工具版本，再查询未知副作用并继续。没有可迁移状态的本地进程应从可验证步骤重建，而不是复制内存快照后假定外部世界没有变化。
+
+从本地迁到云端前先做能力与数据分类：可携带的是结构化 Run State、已授权 Artifact 和版本化执行契约；设备私钥、本地绝对路径、未授权文件与活进程不直接上传。云端先验证目标 Tool/模型版本和数据驻留约束，不兼容时应停在已验证 Checkpoint 并显式降级，而不是让云端在缺失上下文时猜测继续。
+
+
+可进一步分层为端侧运行时与设备适配层、端云连接与消息层、云端控制面、任务执行与状态存储层，以及模型工具发布、安全审计和可观测性层。迁移前还应补充协议兼容、密钥管理、租户隔离、断点恢复演练和回滚策略，明确哪些状态可迁移、哪些只能重新获取。
+
+**追问补充**：端侧 Harness 不能直接照搬云端：需面对更小的算力与上下文、功耗和存储上限、网络抖动、系统权限及隐私隔离，长任务还要适配前后台切换和用户中断。应采用分级模型与工具白名单，端侧先做低风险确定性步骤，云端负责重计算；通过可恢复 Checkpoint、离线队列、超时降级和端到端演练验证一致性。
+
+**差距在哪**：新手只有“缓存后同步”，高手能定义权威状态、离线权限、冲突协议和任务唯一执行权。
+
+---
+
 ## Q：Agentic RL 的 Rollout、Training 与推理引擎如何编排？
 
 > 来源：[AI Infra 实习面经](https://www.nowcoder.com/feed/main/detail/166e576d5afa4a298cf9492ed51bed04)；本轮追问：VERL基于什么框架实现？底层训练和推理引擎是什么？（[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)）
@@ -268,36 +300,6 @@ Router 可以是进程内库、Workflow 节点或独立服务。低延迟、策�
 
 ---
 
-## Q：大量本地端 Agent 与云端 Agent 如何协同？身份、状态、离线和任务迁移边界怎么设计？
-
-> 来源：[小红书 Agent 开发二面](https://www.nowcoder.com/feed/main/detail/9f7361c709f4413396988b4f334a0d6f) / [互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)；本轮追问：当前 Agent 在本地运行，如果迁移到云端或服务器，整体架构应该如何设计？可以分成哪些层？还需要补充什么？（[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)）
-
-**新手答**：“端侧断网时先缓存，联网后同步到云端；复杂任务都放云上跑。”
-
-**高手答**：
-
-先按数据所有权拆分，不能做一个“双向同步所有状态”的大接口：
-
-| 状态 | 权威方 | 离线策略 |
-|------|--------|----------|
-| 用户身份、授权和配额 | 云端控制面 | 端侧持有短期、限定 scope 的快照，过期后降权或停止高风险动作 |
-| 设备能力、实时传感器和本地文件 | 端侧 | 本地读取，按最小必要原则上传摘要或 Artifact 引用 |
-| Run 事件、Checkpoint 和副作用 | 创建该 Run 的控制面 | 用单调序号、幂等键和 lease 同步，不能靠最后写入覆盖 |
-| 模型、Prompt、Tool 和策略版本 | 云端发布面 | 端侧缓存已签名版本，离线期间固定版本运行 |
-
-断网时端侧只能执行预先授权、可撤销、风险受限的动作，并把事件写入有界本地队列。恢复连接后先做身份续期和版本协商，再按 `run_id + event_seq + execution_id` 上传；服务端逐条确认，重复事件幂等吸收，冲突进入显式仲裁。KubeEdge 的 [EdgeHub](https://kubeedge.io/docs/architecture/edge/edgehub/)和 [Device Controller](https://kubeedge.io/docs/architecture/cloud/device_controller/)展示了端云连接、上/下行状态和 desired/reported state 分离，但 Agent 的用户授权与副作用语义仍需业务层自己实现。
-
-任务迁移只在语义 Checkpoint 处发生：冻结旧执行者、提交工作区/Artifact 清单、释放 lease，新执行者取得 fencing token 后校验模型与工具版本，再查询未知副作用并继续。没有可迁移状态的本地进程应从可验证步骤重建，而不是复制内存快照后假定外部世界没有变化。
-
-从本地迁到云端前先做能力与数据分类：可携带的是结构化 Run State、已授权 Artifact 和版本化执行契约；设备私钥、本地绝对路径、未授权文件与活进程不直接上传。云端先验证目标 Tool/模型版本和数据驻留约束，不兼容时应停在已验证 Checkpoint 并显式降级，而不是让云端在缺失上下文时猜测继续。
-
-
-可进一步分层为端侧运行时与设备适配层、端云连接与消息层、云端控制面、任务执行与状态存储层，以及模型工具发布、安全审计和可观测性层。迁移前还应补充协议兼容、密钥管理、租户隔离、断点恢复演练和回滚策略，明确哪些状态可迁移、哪些只能重新获取。
-
-**差距在哪**：新手只有“缓存后同步”，高手能定义权威状态、离线权限、冲突协议和任务唯一执行权。
-
----
-
 ## Q：Agent 平台或 Runtime 出现新框架时，如何评估迁移收益、兼容老旧服务并决定是否淘汰旧方案？
 
 > 来源：[虾皮 Agent 二面](https://www.nowcoder.com/feed/main/detail/345b668e35a9451bb397a9189dfdc943) / [电商 Agent 三面](https://www.nowcoder.com/feed/main/detail/b6b453976c2d4e43a872054d695c2fe2)；本轮追问：线上收益多大？是否显著？实验是否推全？（[本轮追问](https://www.nowcoder.com/discuss/927381090602348544)）
@@ -321,24 +323,9 @@ Router 可以是进程内库、Workflow 节点或独立服务。低延迟、策�
 
 ---
 
-## Q：Agent 如何实现主动向用户推送消息？
-
-> 来源：[9.8 小厂 agent开发实习 面经](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)；本轮追问：医院里大家排队买药取药，屏幕上轮播患者名字；现在要设计一个 PC 页面实现类似的轮播通知，每个用户看到自己的轮播信息，用户之间的信息相互隔离。后端通过实时数仓的 MQ 接收每秒推送的消息，后端消费后发送给前端，前端轮播展示最近 20 条。这个功能你会如何设计和实现？（[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)）
-
-**新手答**：由事件或定时任务触发 Agent，再通过消息通道发送结果。
-
-**高手答**：
-
-事件总线接收业务事件，Scheduler 创建带幂等键的 run，Runtime 执行后把通知投递到 WebSocket、SSE、站内信或短信。消息服务负责模板、偏好、重试和回执；用 outbox 保证状态与消息一致，去重避免重复推送，失败进入死信并支持取消和审计。
-
-
-按用户或屏幕建立租户/用户隔离的订阅主题，消费 MQ 后按 userId 路由到对应 WebSocket/SSE 连接，服务端校验鉴权，不能广播全量消息。前端维护环形队列，仅保留最近 20 条并按序号去重；后端设置消费组、断线重连补偿、背压和积压告警，验证隔离、顺序、重复与断线恢复。
-
-**差距在哪**：考察事件驱动、异步执行和通知可靠性。
-
 ## Q：如何让 Agent 执行过程可观测、可调试？
 
-> 来源：[9.7 百度 agent开发日常实习面经](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)；本轮追问：如何利用可观测链路定位首 Token 延迟、工具调用错误等问题？（[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)）
+> 来源：[9.7 百度 agent开发日常实习面经](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)；本轮追问：如何利用可观测链路定位首 Token 延迟、工具调用错误等问题？（[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)）；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)
 
 **新手答**：展示当前步骤、工具调用、状态和进度，而不是只返回最终答案。
 
@@ -354,6 +341,21 @@ Runtime 为每次 run 生成 trace/span，记录计划版本、状态迁移、�
 ---
 
 ---
+
+## Q：Agent 如何实现主动向用户推送消息？
+
+> 来源：[9.8 小厂 agent开发实习 面经](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)；本轮追问：医院里大家排队买药取药，屏幕上轮播患者名字；现在要设计一个 PC 页面实现类似的轮播通知，每个用户看到自己的轮播信息，用户之间的信息相互隔离。后端通过实时数仓的 MQ 接收每秒推送的消息，后端消费后发送给前端，前端轮播展示最近 20 条。这个功能你会如何设计和实现？（[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)）
+
+**新手答**：由事件或定时任务触发 Agent，再通过消息通道发送结果。
+
+**高手答**：
+
+事件总线接收业务事件，Scheduler 创建带幂等键的 run，Runtime 执行后把通知投递到 WebSocket、SSE、站内信或短信。消息服务负责模板、偏好、重试和回执；用 outbox 保证状态与消息一致，去重避免重复推送，失败进入死信并支持取消和审计。
+
+
+按用户或屏幕建立租户/用户隔离的订阅主题，消费 MQ 后按 userId 路由到对应 WebSocket/SSE 连接，服务端校验鉴权，不能广播全量消息。前端维护环形队列，仅保留最近 20 条并按序号去重；后端设置消费组、断线重连补偿、背压和积压告警，验证隔离、顺序、重复与断线恢复。
+
+**差距在哪**：考察事件驱动、异步执行和通知可靠性。
 
 ## Q：Kubernetes 在 Agent Infra 中负责什么？
 

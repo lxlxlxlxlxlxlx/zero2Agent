@@ -26,7 +26,7 @@ eyebrow: Agent 面试通关 / 13
 
 ### Q：你的 Agent 项目用了什么框架？为什么选它？
 
-> 来源：淘宝闪购 AI应用研发 一面 【CVTE AI应用工程师一面追问：为什么基于 LangGraph 做】；[互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)；[百度 Agent 二面](https://www.nowcoder.com/feed/main/detail/bca7dc14bd654e91b89792608111b211)；[本轮来源](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)；本轮追问：第一个Coding Agent项目是基于什么开源项目改的吗？（[本轮追问](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)）；[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)；[阿里云二面](https://www.nowcoder.com/feed/main/detail/640ec3ff1d7d4e9c8e42f5ededb1e4a6)；本轮追问：如果选择一个开源框架构建 Agent Runtime，会从哪些维度选型？（[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)）；本轮追问：为什么选 LangGraph，不选 LangChain 或者其他编排框架？（[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)）；本轮追问：为什么选 LangGraph？工作流是怎样的？（[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)）；[【社招】腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)；本轮追问：你之前的项目从 Hello Agent 改成 LangGraph，改造做了哪些改动，解决了什么痛点？（[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)）
+> 来源：淘宝闪购 AI应用研发 一面 【CVTE AI应用工程师一面追问：为什么基于 LangGraph 做】；[互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)；[百度 Agent 二面](https://www.nowcoder.com/feed/main/detail/bca7dc14bd654e91b89792608111b211)；[本轮来源](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)；本轮追问：第一个Coding Agent项目是基于什么开源项目改的吗？（[本轮追问](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)）；[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)；[阿里云二面](https://www.nowcoder.com/feed/main/detail/640ec3ff1d7d4e9c8e42f5ededb1e4a6)；本轮追问：如果选择一个开源框架构建 Agent Runtime，会从哪些维度选型？（[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)）；本轮追问：为什么选 LangGraph，不选 LangChain 或者其他编排框架？（[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)）；本轮追问：为什么选 LangGraph？工作流是怎样的？（[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)）；[【社招】腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)；本轮追问：你之前的项目从 Hello Agent 改成 LangGraph，改造做了哪些改动，解决了什么痛点？（[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)）；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)
 
 **新手答**：“用了 LangChain，因为最流行，社区资源多。”
 
@@ -119,7 +119,7 @@ eyebrow: Agent 面试通关 / 13
 
 ### Q：意图识别模块具体怎么做的？
 
-> 来源：淘宝闪购 AI应用研发 一面【[快手 - Agent 开发岗（应用落地 + AI 工具）](https://www.nowcoder.com/discuss/926274020192841728)追问：意图识别模块应采用分类模型还是规则引擎？如何提升准确率？】【[作业帮秋招一面](https://www.nowcoder.com/feed/main/detail/c86c7591ba9d47b696774ddb48cdc9cb)追问：意图识别是怎么做的，使用的什么模型，介绍意图识别树结构。】；[本轮来源](https://www.nowcoder.com/discuss/926528416512315392)；本轮追问：用户意图标签是在进入小程序前生成，还是在对话过程中生成？（[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)）；本轮追问：你具体改了哪个模块？是否改过第三方框架源码？（[本轮追问](https://www.nowcoder.com/feed/main/detail/31bdec3009dd4557936291038fae6bc0)）；本轮追问：为什么选择 Qwen 2.5 系列，并在意图分类环节使用 0.5B 量级模型？参数规模是如何考虑的？（[本轮追问](https://www.nowcoder.com/feed/main/detail/5f08a2b54559471aac95ea8009d38403)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；[本轮来源](https://www.nowcoder.com/feed/main/detail/8f0f005a1f7a48958ac5f07bea3c5d88)；本轮追问：AI意图识别依赖模型，选品推品跟模型结合，这里有针对它做什么研发吗？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ca3fd84341004d72a1dc2c9b853fe25a)）；本轮追问：情绪识别准确率怎么保证？（[蔚来——大模型算法岗（智能座舱/自动驾驶）实习一面](https://www.nowcoder.com/discuss/930755708008558592)）；本轮追问：为什么抽象化后意图识别的效果更好？（[【社招】腾讯三面面经](https://www.nowcoder.com/feed/main/detail/431b4ca35c7f43909219d31aebba5b56)）；本轮追问：意图识别具体是怎么做的，最终的准确率有多少？（[【社招】腾讯二面面经](https://www.nowcoder.com/feed/main/detail/12b18eae310d4b7eadd896aef7f4a712)）；本轮追问：Agent路由是怎么做的？LLM打分、关键词分类还是规则表？具体怎么做的？（[理想智能体应用开发一面](https://www.nowcoder.com/feed/main/detail/5857f695ca2c4edda99e2befd20afafd)）
+> 来源：淘宝闪购 AI应用研发 一面【[快手 - Agent 开发岗（应用落地 + AI 工具）](https://www.nowcoder.com/discuss/926274020192841728)追问：意图识别模块应采用分类模型还是规则引擎？如何提升准确率？】【[作业帮秋招一面](https://www.nowcoder.com/feed/main/detail/c86c7591ba9d47b696774ddb48cdc9cb)追问：意图识别是怎么做的，使用的什么模型，介绍意图识别树结构。】；[本轮来源](https://www.nowcoder.com/discuss/926528416512315392)；本轮追问：用户意图标签是在进入小程序前生成，还是在对话过程中生成？（[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)）；本轮追问：你具体改了哪个模块？是否改过第三方框架源码？（[本轮追问](https://www.nowcoder.com/feed/main/detail/31bdec3009dd4557936291038fae6bc0)）；本轮追问：为什么选择 Qwen 2.5 系列，并在意图分类环节使用 0.5B 量级模型？参数规模是如何考虑的？（[本轮追问](https://www.nowcoder.com/feed/main/detail/5f08a2b54559471aac95ea8009d38403)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；[本轮来源](https://www.nowcoder.com/feed/main/detail/8f0f005a1f7a48958ac5f07bea3c5d88)；本轮追问：AI意图识别依赖模型，选品推品跟模型结合，这里有针对它做什么研发吗？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ca3fd84341004d72a1dc2c9b853fe25a)）；本轮追问：情绪识别准确率怎么保证？（[蔚来——大模型算法岗（智能座舱/自动驾驶）实习一面](https://www.nowcoder.com/discuss/930755708008558592)）；本轮追问：为什么抽象化后意图识别的效果更好？（[【社招】腾讯三面面经](https://www.nowcoder.com/feed/main/detail/431b4ca35c7f43909219d31aebba5b56)）；本轮追问：意图识别具体是怎么做的，最终的准确率有多少？（[【社招】腾讯二面面经](https://www.nowcoder.com/feed/main/detail/12b18eae310d4b7eadd896aef7f4a712)）；本轮追问：Agent路由是怎么做的？LLM打分、关键词分类还是规则表？具体怎么做的？（[理想智能体应用开发一面](https://www.nowcoder.com/feed/main/detail/5857f695ca2c4edda99e2befd20afafd)）；[深至科技一面丨全栈开发实习（医疗AI）](https://www.nowcoder.com/feed/main/detail/4dc705fe3d284276a68a86a59b1acb4f)；[快商通一面凉经 丨 大模型Agent全栈](https://www.nowcoder.com/feed/main/detail/36f96f0e0ff249e2b8025cbe9b19927d)；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)；[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)；[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)
 
 **新手答**：“用 Prompt 让模型判断用户意图，分成几个类别。”
 
@@ -165,6 +165,10 @@ flowchart LR
 
 
 路由可采用规则和关键词处理高确定性请求，轻量分类模型处理常见意图，LLM仅兜底复杂或低频表达，并统一输出意图、实体、置信度和候选路由。抽象成意图树或配置表后，标签边界、示例和路由动作可独立维护，便于回放评测、灰度和新增意图；准确率应按离线标注集及线上抽样分别验证。
+
+**追问补充**：9类不是预设真理，而是由真实请求覆盖率、类间混淆、样本量和路由动作共同决定的折中。可通过混淆矩阵和线上抽样判断是否需要合并或拆分：拆分后若边界更清晰且路由收益稳定就保留，否则回退为上位类。
+
+**追问补充**：若仍采用向量相似度，不直接把最高分当标签：先用标签定义、典型样例和实体约束生成候选，再结合关键词或规则做混合召回，并用交叉编码器重排；训练或评测中加入易混淆意图的难负样本。最终通过候选标签映射、阈值和低置信度澄清完成路由。
 
 **差距在哪**：新手把意图识别当成“一个 Prompt 搞定”的单步操作。高手展示了多阶段管线——预处理→粗分类→实体提取→细分类→置信度兜底，每个阶段有明确的输入输出。面试官考的是你能不能把一个看似简单的模块拆解成工程化的管线。
 
@@ -282,7 +286,7 @@ flowchart LR
 
 ### Q：知识库是怎么构建的？
 
-> 来源：淘宝闪购 AI应用研发 一面【[8.26百度二面](https://www.nowcoder.com/feed/main/detail/190c6c68414b491d856091e42aef2386)追问：IM 项目中的 AI 助手和知识检索是怎么做的？】【[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)追问：你们现在知识库具体是怎么做的？】；本轮追问：项目中各模块的具体实现方式是什么？（[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；[本轮来源](https://www.nowcoder.com/feed/main/detail/8aa09d879bfc408fae7442565fd25fbe)；[本轮来源](https://www.nowcoder.com/feed/main/detail/f9e65706c3274fac86b52f27a70bf902)；[8.25 小红书实习 AI全栈开发实习一面挂凉经](https://www.nowcoder.com/feed/main/detail/c712eda7fbf44ba69835b6dd2ff7fc4c)；本轮追问：项目中的 RAG 是怎么做的？存多大的文档？（[9.18 虾皮shopee chatbot研发实习一面凉经](https://www.nowcoder.com/feed/main/detail/9f02a7f8009d4aca9fc730a18b9f96cc)）；本轮追问：知识库如何构建？Markdown、TXT、PDF 分别怎么切块？（[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)）
+> 来源：淘宝闪购 AI应用研发 一面【[8.26百度二面](https://www.nowcoder.com/feed/main/detail/190c6c68414b491d856091e42aef2386)追问：IM 项目中的 AI 助手和知识检索是怎么做的？】【[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)追问：你们现在知识库具体是怎么做的？】；本轮追问：项目中各模块的具体实现方式是什么？（[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；[本轮来源](https://www.nowcoder.com/feed/main/detail/8aa09d879bfc408fae7442565fd25fbe)；[本轮来源](https://www.nowcoder.com/feed/main/detail/f9e65706c3274fac86b52f27a70bf902)；[8.25 小红书实习 AI全栈开发实习一面挂凉经](https://www.nowcoder.com/feed/main/detail/c712eda7fbf44ba69835b6dd2ff7fc4c)；本轮追问：项目中的 RAG 是怎么做的？存多大的文档？（[9.18 虾皮shopee chatbot研发实习一面凉经](https://www.nowcoder.com/feed/main/detail/9f02a7f8009d4aca9fc730a18b9f96cc)）；本轮追问：知识库如何构建？Markdown、TXT、PDF 分别怎么切块？（[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)）；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)
 
 **新手答**：“把文档切块，用 Embedding 模型转成向量，存进向量数据库，检索的时候做相似度匹配。”
 
@@ -390,7 +394,7 @@ chunk 大小不是越小越好，也不是越大越好：
 
 ### Q：构建知识库时如何解析上传的表格或图片文件？
 
-> 来源：淘宝闪购 AI应用研发 一面【[虾皮Agent一面](https://www.nowcoder.com/feed/main/detail/409dc8793a7b450eb51ee32c2b923d49)追问：文档里面存在表格、图片，如何处理？】；[蔚来——大模型算法岗（智能座舱/自动驾驶）实习一面](https://www.nowcoder.com/discuss/930755708008558592)
+> 来源：淘宝闪购 AI应用研发 一面【[虾皮Agent一面](https://www.nowcoder.com/feed/main/detail/409dc8793a7b450eb51ee32c2b923d49)追问：文档里面存在表格、图片，如何处理？】；[蔚来——大模型算法岗（智能座舱/自动驾驶）实习一面](https://www.nowcoder.com/discuss/930755708008558592)；[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)
 
 **新手答**：“用 OCR 识别文字，然后和普通文本一样处理。”
 
@@ -439,7 +443,7 @@ MinerU 等工具的做法是先用版面分析模型定位表格区域，再用�
 
 ### Q：知识检索时如何提升模型回答正确率？
 
-> 来源：淘宝闪购 AI应用研发 一面
+> 来源：淘宝闪购 AI应用研发 一面；[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)
 
 **新手答**：“多召回几条相关文档，让模型参考更多信息。”
 
@@ -482,6 +486,8 @@ flowchart LR
 **5. 答案校验**
 
 生成回答后，检查答案是否有检索结果支撑——如果模型说了一个检索结果里没有的“事实”，大概率是幻觉。可以加一个轻量的验证步骤，或者在 Prompt 里要求模型标注信息来源。
+
+**追问补充**：高准确率场景应先建立带标准答案和引用依据的评测集，分别测召回率、精排命中率、答案事实一致性，并按问题类型调阈值。证据不足时让模型拒答或澄清，关键结论要求逐条引用来源，再用人工抽检和回归集验证改动。
 
 **差距在哪**：新手只想到“多召回”——这是最直觉但往往适得其反的策略。高手展示了检索全链路优化——查询改写→多路召回→精排→上下文组装→答案校验，每个环节都有可测量的提升。面试官考的是你对 RAG 系统的**全链路优化能力**。
 

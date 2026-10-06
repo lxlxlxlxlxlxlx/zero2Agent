@@ -944,7 +944,7 @@ flowchart TB
 
 ### Q：子 Agent 之间的上下文怎么传递？传什么、不传什么？
 
-> 来源：阿里 Agent 面经【[阿里边缘bu 秋招一面 （已过）](https://www.nowcoder.com/feed/main/detail/bdebbb6088b6405e9eb2bd2c345acb6e)追问：各层 Agent 之间的上下文如何传递？；如何保证传给子 Agent 的上下文足够完整，不会遗漏关键信息？】；本轮追问：第一次 Agent 调用和第二次 Agent 调用分别需要什么上下文？（[本轮追问](https://www.nowcoder.com/feed/main/detail/6a7fbdcf484a4b2bbe4b900b2dbd5750)）；[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)；本轮追问：主 Agent 跟子 Agent 之间怎么传递上下文，怎么保证不漏掉关键信息？（[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)）
+> 来源：阿里 Agent 面经【[阿里边缘bu 秋招一面 （已过）](https://www.nowcoder.com/feed/main/detail/bdebbb6088b6405e9eb2bd2c345acb6e)追问：各层 Agent 之间的上下文如何传递？；如何保证传给子 Agent 的上下文足够完整，不会遗漏关键信息？】；本轮追问：第一次 Agent 调用和第二次 Agent 调用分别需要什么上下文？（[本轮追问](https://www.nowcoder.com/feed/main/detail/6a7fbdcf484a4b2bbe4b900b2dbd5750)）；[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)；本轮追问：主 Agent 跟子 Agent 之间怎么传递上下文，怎么保证不漏掉关键信息？（[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)）；[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)
 
 **新手答**：“把上一个 Agent 的输出传给下一个就行。”
 

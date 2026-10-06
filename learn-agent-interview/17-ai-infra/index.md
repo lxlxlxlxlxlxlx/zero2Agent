@@ -416,6 +416,19 @@ RCA 层应输出带证据的候选列表，而不是一句确定性结论：哪�
 
 ---
 
+## Q：DeepSpeed ZeRO 的三个阶段分别做什么？
+
+> 来源：[本轮面经（文章 185）](https://www.nowcoder.com/discuss/926467109717118976)；[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)
+
+**新手答**：“Stage 1、2、3 逐步切分优化器、梯度和参数。”
+
+**高手答**：[DeepSpeed ZeRO 文档](https://www.deepspeed.ai/tutorials/zero/)所述的分片策略可减少数据并行下的冗余：Stage 1 分片 optimizer states，Stage 2 再分片 gradients，Stage 3 连 parameters 也分片，前向/反向需要按需 gather。Stage 越高通常显存节省越多，但通信、参数管理和 checkpoint 复杂度也会上升；选择要结合模型规模、GPU 显存、互联带宽、micro-batch、激活重计算和吞吐 SLO。还要确认 offload、参数持久化、保存/恢复和第三方算子兼容性，不能只按“Stage 3 最好”决策。
+
+**差距在哪**：新手只背三阶段顺序，高手能说明分片对象、通信代价和选型边界。
+
+---
+
+
 ## Q：KV Cache 命中率如何评估与优化？
 
 > 来源：[【社招】腾讯二面面经](https://www.nowcoder.com/feed/main/detail/12b18eae310d4b7eadd896aef7f4a712)
@@ -534,19 +547,6 @@ Checkpoint 不只是模型权重，还可能包含 Optimizer、Scheduler、随�
 **差距在哪**：新手只会“全局同步”，高手能定位同步域、异步错误、生命周期和性能串行化。
 
 ---
-
-## Q：DeepSpeed ZeRO 的三个阶段分别做什么？
-
-> 来源：[本轮面经（文章 185）](https://www.nowcoder.com/discuss/926467109717118976)
-
-**新手答**：“Stage 1、2、3 逐步切分优化器、梯度和参数。”
-
-**高手答**：[DeepSpeed ZeRO 文档](https://www.deepspeed.ai/tutorials/zero/)所述的分片策略可减少数据并行下的冗余：Stage 1 分片 optimizer states，Stage 2 再分片 gradients，Stage 3 连 parameters 也分片，前向/反向需要按需 gather。Stage 越高通常显存节省越多，但通信、参数管理和 checkpoint 复杂度也会上升；选择要结合模型规模、GPU 显存、互联带宽、micro-batch、激活重计算和吞吐 SLO。还要确认 offload、参数持久化、保存/恢复和第三方算子兼容性，不能只按“Stage 3 最好”决策。
-
-**差距在哪**：新手只背三阶段顺序，高手能说明分片对象、通信代价和选型边界。
-
----
-
 
 ## Q：GPU 峰值性能、计算单元与寄存器等硬件参数如何影响算子性能？
 

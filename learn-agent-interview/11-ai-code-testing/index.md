@@ -120,7 +120,7 @@ else:
 
 ### Q：如何测试 AI 生成代码的正确性？
 
-> 来源：蚂蚁集团 Agent 开发一面 【字节实习Agent开发一面追问：代码Agent生成结果有效性/准确率量化】【小红书 Agent 岗一面追问：Agent 自主生成测试程序的实现】 / [字节中国交易与广告 AI 全栈二面](https://www.nowcoder.com/feed/main/detail/0f77410f8b1b4daca879d5ff99c7ae07) / [蚂蚁 Agent 开发一面](https://www.nowcoder.com/feed/main/detail/39451cad5d2245b491d16778f2a9ca01)；本轮追问：看程序找出当前程序中存在的问题，然后进行修改（[本轮追问](https://www.nowcoder.com/discuss/926928449204129792)）；本轮追问：站在测试开发角度，怎么验证功能是否符合预期？（[本轮追问](https://www.nowcoder.com/discuss/927594784770764800)）；本轮追问：AI 生成代码后，怎么做测试校验和部署测试？（[本轮追问](https://www.nowcoder.com/feed/main/detail/d0be5ebcc6a0480d8975498fba408250)）；本轮追问：这个项目中哪些代码和设计是你亲自完成的，哪些是 AI Coding 辅助完成的？你如何验收 AI 生成的代码？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)）；本轮追问：AI智能体编写的SQL出现错误，如何发现并处理？（[4399-agent开发面经](https://www.nowcoder.com/feed/main/detail/b040e00a505344deac8f0d2b4968b171)）；本轮追问：除了编译成功和测试通过，还应该使用哪些标准评价代码结果？（[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)）；[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)；本轮追问：会让 AI 提前生成测试吗？只做函数单测，还是也做整体测试？（[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)）
+> 来源：蚂蚁集团 Agent 开发一面 【字节实习Agent开发一面追问：代码Agent生成结果有效性/准确率量化】【小红书 Agent 岗一面追问：Agent 自主生成测试程序的实现】 / [字节中国交易与广告 AI 全栈二面](https://www.nowcoder.com/feed/main/detail/0f77410f8b1b4daca879d5ff99c7ae07) / [蚂蚁 Agent 开发一面](https://www.nowcoder.com/feed/main/detail/39451cad5d2245b491d16778f2a9ca01)；本轮追问：看程序找出当前程序中存在的问题，然后进行修改（[本轮追问](https://www.nowcoder.com/discuss/926928449204129792)）；本轮追问：站在测试开发角度，怎么验证功能是否符合预期？（[本轮追问](https://www.nowcoder.com/discuss/927594784770764800)）；本轮追问：AI 生成代码后，怎么做测试校验和部署测试？（[本轮追问](https://www.nowcoder.com/feed/main/detail/d0be5ebcc6a0480d8975498fba408250)）；本轮追问：这个项目中哪些代码和设计是你亲自完成的，哪些是 AI Coding 辅助完成的？你如何验收 AI 生成的代码？（[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)）；本轮追问：AI智能体编写的SQL出现错误，如何发现并处理？（[4399-agent开发面经](https://www.nowcoder.com/feed/main/detail/b040e00a505344deac8f0d2b4968b171)）；本轮追问：除了编译成功和测试通过，还应该使用哪些标准评价代码结果？（[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)）；[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)；本轮追问：会让 AI 提前生成测试吗？只做函数单测，还是也做整体测试？（[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)）；[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)；[美团ai全栈二面](https://www.nowcoder.com/feed/main/detail/064725eb6da14cda9efabb2a51a68681)
 
 **新手答**：“跑一下看能不能通过。”
 
@@ -169,6 +169,8 @@ flowchart TB
 
 
 对 Agent 生成的 SQL，先做语法、表结构和权限校验，再在只读沙箱用 EXPLAIN、样例数据和结果集约束验证，检查空结果、行数异常及数据一致性；发现错误时记录 SQL 与上下文，回滚并修正，禁止直接在线上写入。评价还应看需求符合度、边界覆盖、安全性、可维护性、资源消耗和回归影响。
+
+**追问补充**：测试用例应先从需求和接口契约提取输入、输出及不变量，再按等价类设计正常、边界、空值和异常用例；涉及状态时覆盖状态转移与幂等性，并为每例明确可判定的预期结果。最后按代码分支、风险和历史缺陷补齐覆盖，用变异测试检查用例是否真的有杀伤力。
 
 **差距在哪**：新手的“跑一下”只覆盖了“能不能运行”。高手从静态（类型/lint/安全）、动态（回归/自生成/属性测试）、语义（Spec 对比/变异测试/人工）三层构建了完整的正确性验证体系。面试官考的是你对 AI 生成代码测试有没有系统性的方法论——不是“测了没有”，而是“怎么测才可靠”。
 
@@ -237,7 +239,7 @@ flowchart TB
 
 ## Q：如何用 Agent 自动化测试一个现有软件项目，并划分规划、执行、Oracle 与人工门禁？
 
-> 来源：蚂蚁集团效能研发面经【[0824 百度二面](https://www.nowcoder.com/feed/main/detail/2c301fd7793e43d18b8f8481d25a72e8)追问：长期演进框架的上下文与产物治理】【[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果完全自动化地交给Agent不太放心，如何解决？】；本轮追问：AI 平台与真正执行测试的软件之间如何进行数据交互？（[本轮追问](https://www.nowcoder.com/feed/main/detail/31bdec3009dd4557936291038fae6bc0)）；本轮追问：自动化用力叠加你设计的边角场景测试策略，整体功能场景覆盖度如何预估？（[本轮追问](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)
+> 来源：蚂蚁集团效能研发面经【[0824 百度二面](https://www.nowcoder.com/feed/main/detail/2c301fd7793e43d18b8f8481d25a72e8)追问：长期演进框架的上下文与产物治理】【[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果完全自动化地交给Agent不太放心，如何解决？】；本轮追问：AI 平台与真正执行测试的软件之间如何进行数据交互？（[本轮追问](https://www.nowcoder.com/feed/main/detail/31bdec3009dd4557936291038fae6bc0)）；本轮追问：自动化用力叠加你设计的边角场景测试策略，整体功能场景覆盖度如何预估？（[本轮追问](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)；[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)
 
 **新手答**：“让 Agent 阅读需求和代码，生成测试用例，运行失败后自动修复，最后把报告交给人看。”
 
@@ -266,13 +268,15 @@ Oracle 是最容易被忽略的部分。HTTP 200、页面出现文字或“模�
 
 计划、生成用例、运行日志、失败证据、人工结论和最终报告都绑定 `run_id + requirement_version + code_commit`。场景级用例用前置状态、动作和业务不变量串联，已完成任务由确定性状态记录，不让模型根据聊天历史猜进度。需求变更时生成显式 diff，标记哪些用例仍有效、哪些需重算；这样既能增量读取，也能回答某个结论对应哪版需求和代码。
 
+**追问补充**：覆盖度不能只看行覆盖率，应按需求验收项、风险类别、接口状态、边界数据和故障路径建立矩阵，并将每个 Case 绑定需求与断言；测试框架可依据变更范围动态生成并由固定 Oracle 校验。验证 Agent 只能辅助解释，关键结果仍由确定性断言或人工确认。失败可回传修复，但每轮必须保留原证据、限制重试，禁止改弱断言，连续失败进入人工门禁。
+
 **差距在哪**：新手把 Agent 当“会写测试的脚本”。高手把规划、受控执行、可信 Oracle 和人工责任拆开，解决了测试环境、判定独立性、副作用、失败分类和发布门禁，才能让自动化结果进入真实研发流程。
 
 ---
 
 ## Q：AI 生成代码在哪些场景更具落地价值？应用边界在哪？
 
-> 来源：蚂蚁Agent一二面（Code Agent方向）；本轮追问：AST 存在哪些局限性？可以用什么技术弥补？（[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)）；[9.14字节推荐架构一面](https://www.nowcoder.com/feed/main/detail/467d01beed8a40b89ac414b90fc7fb85)；[9.20 汇川技术 数字化全栈工程师 一面](https://www.nowcoder.com/feed/main/detail/28032c48a90c4f69827704deb3fae34c)；本轮追问：AI Coding对你来说带来了哪些提效？你认为它有什么局限？（[携程AI应用开发实习一面（OC）](https://www.nowcoder.com/discuss/933058120102739968)）
+> 来源：蚂蚁Agent一二面（Code Agent方向）；本轮追问：AST 存在哪些局限性？可以用什么技术弥补？（[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)）；[9.14字节推荐架构一面](https://www.nowcoder.com/feed/main/detail/467d01beed8a40b89ac414b90fc7fb85)；[9.20 汇川技术 数字化全栈工程师 一面](https://www.nowcoder.com/feed/main/detail/28032c48a90c4f69827704deb3fae34c)；本轮追问：AI Coding对你来说带来了哪些提效？你认为它有什么局限？（[携程AI应用开发实习一面（OC）](https://www.nowcoder.com/discuss/933058120102739968)）；[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)
 
 **新手答**：“写 CRUD 和简单逻辑的时候好用，复杂的不行。”
 
@@ -297,7 +301,7 @@ Oracle 是最容易被忽略的部分。HTTP 200、页面出现文字或“模�
 
 ## Q：工程级 Code Agent 处理项目上下文、生成代码时有哪些核心挑战？
 
-> 来源：蚂蚁Agent一二面（Code Agent方向） / [字节 AI 应用开发二面](https://www.nowcoder.com/feed/main/detail/7e8a821479a649fd914e449d312eeb95)【[拼多多 - Agent 开发岗（工程化 + 数据库）](https://www.nowcoder.com/discuss/926273867092430848)追问：代码生成全链路及超长上下文处理？】；[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)
+> 来源：蚂蚁Agent一二面（Code Agent方向） / [字节 AI 应用开发二面](https://www.nowcoder.com/feed/main/detail/7e8a821479a649fd914e449d312eeb95)【[拼多多 - Agent 开发岗（工程化 + 数据库）](https://www.nowcoder.com/discuss/926273867092430848)追问：代码生成全链路及超长上下文处理？】；[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)；[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)
 
 **新手答**：“就是上下文太长放不下的问题。”
 
@@ -312,6 +316,8 @@ Oracle 是最容易被忽略的部分。HTTP 200、页面出现文字或“模�
 6. **安全性约束**：不能引入注入漏洞、不能泄露密钥、不能修改不该改的文件
 
 这些瓶颈应分层定位：检索层看是否拿到正确代码和规范，规划层看改动范围与依赖是否完整，执行层看工具权限、环境和失败恢复，验证层看是否有独立 Oracle。工程交付不能用“生成了代码”或“命令执行成功”收口，而要留下最小 diff、依赖影响、可复现验证命令、测试与安全门禁结果，以及仍未覆盖的风险；无法验证的部分应明确交给人，而不是让同一个生成模型自证正确。
+
+**追问补充**：生成代码前应提供结构化任务说明、相关文件片段与依赖关系、接口和数据模型、项目编码规范、可参考的相似实现，以及验收标准和测试用例；生成中再通过编译器、lint 和测试反馈迭代，避免只依赖自然语言描述。
 
 **差距在哪**：面试官要看你是否有“从 Demo 到工程”的认知跨越——玩具级 Code Agent 只管生成，工程级还要管选择、验证、安全。
 

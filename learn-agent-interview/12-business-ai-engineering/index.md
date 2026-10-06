@@ -154,7 +154,7 @@ AI 方案的目标不是“模型更准”，是“业务更好”。两者经�
 
 ### Q：业务方反馈“AI 效果差”，你怎么系统性定位问题？
 
-> 来源：网易 AI Agent 开发实习（原题：玩家反馈 AI 很蠢如何定位）【[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果AI Agent效果没有达到预期、在某些指标上落后，你们怎么优化？】；本轮追问：能否详细讲讲在小米项目中，你观察到的一个 Agent 效果上的具体问题，以及你们最终是怎么迭代和改进的？（[本轮追问](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；本轮追问：如果有人质疑你的 Skill 结论失真，你怎么排查和解决？（[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)）
+> 来源：网易 AI Agent 开发实习（原题：玩家反馈 AI 很蠢如何定位）【[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果AI Agent效果没有达到预期、在某些指标上落后，你们怎么优化？】；本轮追问：能否详细讲讲在小米项目中，你观察到的一个 Agent 效果上的具体问题，以及你们最终是怎么迭代和改进的？（[本轮追问](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)）；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；本轮追问：如果有人质疑你的 Skill 结论失真，你怎么排查和解决？（[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)）；[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)；[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)；[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)
 
 **新手答**：“看看 bad case，调调 Prompt。”
 
@@ -211,6 +211,8 @@ flowchart LR
 - 定期从线上抽样做自动评测（LLM-as-Judge 或规则校验）
 - 关键指标（意图识别准确率、检索相关度、用户满意度）设告警阈值
 - 新版本上线后自动跑回归测试集
+
+**追问补充**：线上需把质量与可用性一起治理：为检索、工具和模型调用设置超时、重试、熔断及降级答案，校验引用、格式和敏感内容；新 Prompt 或模型先灰度并保留版本回滚。通过 trace 回放、固定回归集和线上抽样，区分模型、Prompt、检索、工具及格式化环节的回归。
 
 **差距在哪**：新手直接看 bad case 调 Prompt——这是在“碰运气”。高手先分类统计找到主要失败类型，再逐环节定位瓶颈，最后区分能力问题和数据问题。面试官考的是你有没有系统性的排查方法论，而不是“哪里不对改哪里”。
 

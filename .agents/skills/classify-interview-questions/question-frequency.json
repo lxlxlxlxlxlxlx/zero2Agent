@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-07",
   "countingRule": "frequency equals the number of attributable interview occurrences in evidence; generic compilations and untraceable high-frequency labels do not count; firstSeenOrder is the stable tie-breaker inside a topic group",
   "questions": [
     {
       "dimension": "01-architecture-design",
       "title": "你用 ReAct 还是 Plan-and-Execute？为什么？",
-      "frequency": 17,
+      "frequency": 19,
       "firstSeenOrder": 1,
       "evidence": [
         "腾讯终面",
@@ -25,17 +25,20 @@
         "[字节数据中台Agent全栈面经](https://www.nowcoder.com/feed/main/detail/fe77496948f74b4091ab4bb6e8156c8b)",
         "小红书 Agent 岗一面追问：ReAct/Plan Mode 双模式与多轮状态机实现",
         "[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)",
-        "[淘天集团 Agent算法 一面](https://www.nowcoder.com/discuss/931957859154132992)"
+        "[淘天集团 Agent算法 一面](https://www.nowcoder.com/discuss/931957859154132992)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
       "dimension": "01-architecture-design",
       "title": "Tree of Thoughts (ToT) 在线上系统里能用吗？成本不高？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 2,
       "evidence": [
         "腾讯终面",
-        "腾讯 Agent 岗终面"
+        "腾讯 Agent 岗终面",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -119,7 +122,7 @@
     {
       "dimension": "01-architecture-design",
       "title": "什么时候该做 Agent？和 Workflow 的边界在哪？",
-      "frequency": 15,
+      "frequency": 16,
       "firstSeenOrder": 9,
       "evidence": [
         "科大讯飞一面追问：workflow和ReAct的区别与使用时机",
@@ -136,7 +139,8 @@
         "[搜狐畅游 Agent 开发一面（已oc）](https://www.nowcoder.com/feed/main/detail/f0648c2e373f4f03a10dd0fffbd235cd)",
         "[脑利一面](https://www.nowcoder.com/feed/main/detail/4002450a24194b4eaa759a2450cab7f5)",
         "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)",
-        "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)"
+        "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -615,6 +619,19 @@
     },
     {
       "dimension": "01-architecture-design",
+      "title": "Agent 组件拆解为什么适合责任链模式？与状态机、DAG 的边界是什么？",
+      "frequency": 5,
+      "firstSeenOrder": 45,
+      "evidence": [
+        "北京四维图新面经",
+        "阿里 Agent Infra 一面题库追问：为什么 Agent 本质上是状态机",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)",
+        "[美团ai全栈二面](https://www.nowcoder.com/feed/main/detail/064725eb6da14cda9efabb2a51a68681)"
+      ]
+    },
+    {
+      "dimension": "01-architecture-design",
       "title": "AI Coding Agent 的 Solo 模式和 Plan 模式应该如何设计？",
       "frequency": 3,
       "firstSeenOrder": 47,
@@ -626,12 +643,12 @@
     },
     {
       "dimension": "01-architecture-design",
-      "title": "Agent 组件拆解为什么适合责任链模式？与状态机、DAG 的边界是什么？",
+      "title": "如何在架构重构与业务需求之间进行技术资源和交付优先级取舍？",
       "frequency": 2,
-      "firstSeenOrder": 45,
+      "firstSeenOrder": 69,
       "evidence": [
-        "北京四维图新面经",
-        "阿里 Agent Infra 一面题库追问：为什么 Agent 本质上是状态机"
+        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
       ]
     },
     {
@@ -668,15 +685,6 @@
       "firstSeenOrder": 68,
       "evidence": [
         "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)"
-      ]
-    },
-    {
-      "dimension": "01-architecture-design",
-      "title": "如何在架构重构与业务需求之间进行技术资源和交付优先级取舍？",
-      "frequency": 1,
-      "firstSeenOrder": 69,
-      "evidence": [
-        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)"
       ]
     },
     {
@@ -768,7 +776,7 @@
     {
       "dimension": "02-tool-management",
       "title": "大模型的 Function Call 是什么？Tool Use 一般怎么用？",
-      "frequency": 15,
+      "frequency": 16,
       "firstSeenOrder": 9,
       "evidence": [
         "小红书AI应用开发追问：不做训练怎么让Agent调用工具+调用格式",
@@ -785,13 +793,14 @@
         "[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)",
         "小红书 Agent 岗一面追问：`tool_use` 捕获、执行与非标准命令请求",
         "[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)",
-        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)"
+        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)",
+        "[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)"
       ]
     },
     {
       "dimension": "02-tool-management",
       "title": "MCP 和 Skills 的本质区别是什么？都是工具调用，为什么需要两套机制？",
-      "frequency": 13,
+      "frequency": 14,
       "firstSeenOrder": 43,
       "evidence": [
         "蚂蚁集团智能体与大模型应用二面 ；；本轮追问：Agent、MCP 和 Skill 的区别是什么？（）",
@@ -806,13 +815,14 @@
         "[美团 - Agent 开发岗（场景设计方向）](https://www.nowcoder.com/discuss/926273749555376128)",
         "追问：MCP是什么，为什么项目没有选用MCP而选择自己封装？Skill与MCP的核心区别是什么？",
         "[pdd agent 一面](https://www.nowcoder.com/feed/main/detail/ee971b755cbd475a91ef62cee38cdac8)",
-        "[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)"
+        "[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
       "dimension": "02-tool-management",
       "title": "MCP Server 是怎么构建的？",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 7,
       "evidence": [
         "蚂蚁一面",
@@ -820,16 +830,18 @@
         "[钉钉二面](https://www.nowcoder.com/discuss/925181638412091392)追问：自己有去搭建过 MCP Server 吗？",
         "字节 Agent 实习二面",
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/ac25d49b0692473c8f65654adda82b9b)",
-        "[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)"
+        "[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)",
+        "[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)"
       ]
     },
     {
       "dimension": "02-tool-management",
       "title": "大厂开源的 CLI 工具（如 lark-cli）和 MCP 有什么区别？它们跟直接调 API 又有什么不同？",
-      "frequency": 1,
+      "frequency": 2,
       "firstSeenOrder": 45,
       "evidence": [
-        "[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)"
+        "[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)",
+        "[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)"
       ]
     },
     {
@@ -868,7 +880,7 @@
     {
       "dimension": "02-tool-management",
       "title": "MCP 协议的完整调用过程是怎样的？",
-      "frequency": 12,
+      "frequency": 13,
       "firstSeenOrder": 49,
       "evidence": [
         "高德 AI 应用开发实习一面 ；；；本轮追问：框架如何接入 MCP？（）",
@@ -882,7 +894,8 @@
         "追问：MCP 的客户端和服务端交互的完整流程是怎么样的？中间的具体内容是什么？",
         "[去哪儿AI面试](https://www.nowcoder.com/discuss/924765100441903104)",
         "追问：MCP 用过吗？Agent 和 MCP 的交互方式是怎样的？",
-        "[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)"
+        "[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -1008,7 +1021,7 @@
     {
       "dimension": "02-tool-management",
       "title": "没有 MCP 之前大模型调用工具走的是什么流程？MCP 本身有什么缺点或者挑战？",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 27,
       "evidence": [
         "淘天AI Agent一面",
@@ -1016,7 +1029,8 @@
         "淘天/AI Agent一面 [1/2]",
         "淘天/AI Agent一面 [2/2]",
         "淘天/AI Agent一面 ；本轮追问：MCP原理是什么？（）",
-        "[九方智投 一面凉经](https://www.nowcoder.com/feed/main/detail/92efed84eb68493d82132e03b7e43ae0)"
+        "[九方智投 一面凉经](https://www.nowcoder.com/feed/main/detail/92efed84eb68493d82132e03b7e43ae0)",
+        "[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)"
       ]
     },
     {
@@ -1030,6 +1044,18 @@
         "小得盈满 / AI 相关岗位 / 一面 [3/3]",
         "小得盈满 / AI 相关岗位 / 一面；本轮追问：你们的 Skill、CLI 和 Agent Runtime 分别承担什么职责？一次工具调用是如何执行的？（）",
         "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)"
+      ]
+    },
+    {
+      "dimension": "02-tool-management",
+      "title": "Tool-use SFT 的训练目标是什么？基座模型已经具备工具调用能力时，SFT 还需要学习什么？",
+      "frequency": 4,
+      "firstSeenOrder": 29,
+      "evidence": [
+        "唯品会NLP算法实习一面",
+        "唯品会/NLP算法实习一面 [1/2]",
+        "唯品会/NLP算法实习一面 [2/2]",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -1053,17 +1079,6 @@
         "淘天AI Agent一面",
         "淘天/AI Agent一面 [1/2]",
         "淘天/AI Agent一面 [2/2]"
-      ]
-    },
-    {
-      "dimension": "02-tool-management",
-      "title": "Tool-use SFT 的训练目标是什么？基座模型已经具备工具调用能力时，SFT 还需要学习什么？",
-      "frequency": 3,
-      "firstSeenOrder": 29,
-      "evidence": [
-        "唯品会NLP算法实习一面",
-        "唯品会/NLP算法实习一面 [1/2]",
-        "唯品会/NLP算法实习一面 [2/2]"
       ]
     },
     {
@@ -1170,7 +1185,7 @@
     {
       "dimension": "03-fault-tolerance",
       "title": "Agent 如何减少幻觉？在工业场景下怎么做？",
-      "frequency": 13,
+      "frequency": 14,
       "firstSeenOrder": 3,
       "evidence": [
         "字节一面",
@@ -1185,7 +1200,8 @@
         "[千问AI研发一面凉经](https://www.nowcoder.com/feed/main/detail/ebf0ec03e5ee4fa8a140cc8d247b1e20)",
         "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
         "[阿里云 ai应用开发 一面](https://www.nowcoder.com/feed/main/detail/7e27cf4dedb142d9b643471ba31276ed)",
-        "[美团AI Agent一面](https://www.nowcoder.com/feed/main/detail/50bcdc47e7754aa7be59b6318fea514b)"
+        "[美团AI Agent一面](https://www.nowcoder.com/feed/main/detail/50bcdc47e7754aa7be59b6318fea514b)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)"
       ]
     },
     {
@@ -1224,6 +1240,22 @@
     },
     {
       "dimension": "03-fault-tolerance",
+      "title": "幻觉的各种治理手段，优缺点分别是什么？行为限制在什么阶段做？",
+      "frequency": 8,
+      "firstSeenOrder": 44,
+      "evidence": [
+        "蚂蚁集团智能体与大模型应用一面 / ；；本轮追问：大模型幻觉的原因是什么？如何解决？（）；本轮追问：多模态模型产生幻觉的主要原因是什么？怎么通过后训练、RAG、规则缓解？（）",
+        "[去哪儿 AI 全栈 AI 面](https://www.nowcoder.com/feed/main/detail/9cf516b3c2404100baeac52564e40709)",
+        "[接受加班吗....](https://www.nowcoder.com/discuss/930502345694203904)",
+        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
+        "[小红书多模态秋招二面](https://www.nowcoder.com/discuss/930755993066041344)",
+        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)",
+        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
+      ]
+    },
+    {
+      "dimension": "03-fault-tolerance",
       "title": "你会如何限制 Agent 的思考深度、工具调用次数和递归层级，避免无限循环？",
       "frequency": 7,
       "firstSeenOrder": 43,
@@ -1235,21 +1267,6 @@
         "追问：如何设计任务完成的停止条件？",
         "[月之暗面（Moonshot）- Agent 应用开发岗](https://www.nowcoder.com/discuss/926274239747952640)",
         "[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)"
-      ]
-    },
-    {
-      "dimension": "03-fault-tolerance",
-      "title": "幻觉的各种治理手段，优缺点分别是什么？行为限制在什么阶段做？",
-      "frequency": 7,
-      "firstSeenOrder": 44,
-      "evidence": [
-        "蚂蚁集团智能体与大模型应用一面 / ；；本轮追问：大模型幻觉的原因是什么？如何解决？（）；本轮追问：多模态模型产生幻觉的主要原因是什么？怎么通过后训练、RAG、规则缓解？（）",
-        "[去哪儿 AI 全栈 AI 面](https://www.nowcoder.com/feed/main/detail/9cf516b3c2404100baeac52564e40709)",
-        "[接受加班吗....](https://www.nowcoder.com/discuss/930502345694203904)",
-        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
-        "[小红书多模态秋招二面](https://www.nowcoder.com/discuss/930755993066041344)",
-        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)",
-        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)"
       ]
     },
     {
@@ -1279,6 +1296,21 @@
     },
     {
       "dimension": "03-fault-tolerance",
+      "title": "Prompt 注入攻击如何防御？",
+      "frequency": 7,
+      "firstSeenOrder": 10,
+      "evidence": [
+        "快手一面",
+        "[月之暗面（Moonshot）- Agent 应用开发岗](https://www.nowcoder.com/discuss/926274239747952640)追问：如何防范 Prompt Injection 绕过系统指令？",
+        "快手 AI Agent 开发一面；；；本轮追问：什么是提示注入攻击？ / 什么是大模型越狱？（）",
+        "[本轮来源](https://www.nowcoder.com/feed/main/detail/8aa09d879bfc408fae7442565fd25fbe)",
+        "[Agent 开发面经](https://www.nowcoder.com/discuss/930572525178748928)",
+        "[绿盟科技一晚速通三面已offer](https://www.nowcoder.com/feed/main/detail/39776141d05c462aa212a9adc229052d)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
+      ]
+    },
+    {
+      "dimension": "03-fault-tolerance",
       "title": "工具调用的安全控制是怎么实现的？如何限制模型调用敏感接口？",
       "frequency": 7,
       "firstSeenOrder": 47,
@@ -1290,20 +1322,6 @@
         "[阿里云二面](https://www.nowcoder.com/feed/main/detail/640ec3ff1d7d4e9c8e42f5ededb1e4a6)",
         "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)",
         "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)"
-      ]
-    },
-    {
-      "dimension": "03-fault-tolerance",
-      "title": "Prompt 注入攻击如何防御？",
-      "frequency": 6,
-      "firstSeenOrder": 10,
-      "evidence": [
-        "快手一面",
-        "[月之暗面（Moonshot）- Agent 应用开发岗](https://www.nowcoder.com/discuss/926274239747952640)追问：如何防范 Prompt Injection 绕过系统指令？",
-        "快手 AI Agent 开发一面；；；本轮追问：什么是提示注入攻击？ / 什么是大模型越狱？（）",
-        "[本轮来源](https://www.nowcoder.com/feed/main/detail/8aa09d879bfc408fae7442565fd25fbe)",
-        "[Agent 开发面经](https://www.nowcoder.com/discuss/930572525178748928)",
-        "[绿盟科技一晚速通三面已offer](https://www.nowcoder.com/feed/main/detail/39776141d05c462aa212a9adc229052d)"
       ]
     },
     {
@@ -1420,14 +1438,15 @@
     {
       "dimension": "03-fault-tolerance",
       "title": "如果上下文爆炸或工具循环调用，你是怎么解决的？",
-      "frequency": 5,
+      "frequency": 6,
       "firstSeenOrder": 50,
       "evidence": [
         "慧疗互联网医院 Agent开发一面",
         "[面完字节Agent，我人都傻了](https://www.nowcoder.com/discuss/929492609167290368)",
         "字节Agent开发实习生一面同题：“压缩方案是啥（三级压缩）”",
         "追问：Agent上下文窗口膨胀你是怎么解决的？难点是什么？",
-        "[格物致信（一面过，二面线下拒）](https://www.nowcoder.com/feed/main/detail/f68f0d54184944c391e0d7b6d1bb82c8)"
+        "[格物致信（一面过，二面线下拒）](https://www.nowcoder.com/feed/main/detail/f68f0d54184944c391e0d7b6d1bb82c8)",
+        "[多益网络面试](https://www.nowcoder.com/discuss/935573069089820672)"
       ]
     },
     {
@@ -1537,6 +1556,20 @@
     },
     {
       "dimension": "03-fault-tolerance",
+      "title": "工具失败后，哪些异常处理应由大模型参与，哪些必须由确定性程序控制？",
+      "frequency": 6,
+      "firstSeenOrder": 32,
+      "evidence": [
+        "影石创新 AI Agent一面",
+        "[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)",
+        "[本轮追问](https://www.nowcoder.com/discuss/927969546672046080)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)",
+        "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "03-fault-tolerance",
       "title": "Agent Workflow 如何保证节点原子性，并在部分成功后安全回滚？",
       "frequency": 5,
       "firstSeenOrder": 29,
@@ -1546,19 +1579,6 @@
         "字节剪映/Agent 一面；本轮追问：你所说的受控 Agent Workflow 具体受控在哪里？（）；本轮追问：本地Agent工作流遇到异常、边界场景，有没有专门设计处理机制？（）",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)",
         "[美团AI Agent一面](https://www.nowcoder.com/feed/main/detail/50bcdc47e7754aa7be59b6318fea514b)"
-      ]
-    },
-    {
-      "dimension": "03-fault-tolerance",
-      "title": "工具失败后，哪些异常处理应由大模型参与，哪些必须由确定性程序控制？",
-      "frequency": 5,
-      "firstSeenOrder": 32,
-      "evidence": [
-        "影石创新 AI Agent一面",
-        "[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)",
-        "[本轮追问](https://www.nowcoder.com/discuss/927969546672046080)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)",
-        "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)"
       ]
     },
     {
@@ -1638,7 +1658,7 @@
     {
       "dimension": "04-memory-context",
       "title": "上下文窗口不够用，对话太长了怎么办？",
-      "frequency": 17,
+      "frequency": 18,
       "firstSeenOrder": 3,
       "evidence": [
         "字节实习二面",
@@ -1657,7 +1677,8 @@
         "[拼多多AI Agent一面，双机位，全程严肃](https://www.nowcoder.com/feed/main/detail/3cb8b70b192f4051b3c19ace4dda1beb)",
         "小红书 Agent 岗一面追问：两层压缩、LLM 保留判定与大结果落盘",
         "[腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)",
-        "社招"
+        "社招",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -1677,11 +1698,12 @@
     {
       "dimension": "04-memory-context",
       "title": "多 Agent / 多异步任务下，如何防止上下文污染？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 4,
       "evidence": [
         "字节一面",
-        "字节后端开发 Agent 一面"
+        "字节后端开发 Agent 一面",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
       ]
     },
     {
@@ -1696,7 +1718,7 @@
     {
       "dimension": "04-memory-context",
       "title": "讲一下 Agent 中的“长短期记忆”",
-      "frequency": 22,
+      "frequency": 24,
       "firstSeenOrder": 5,
       "evidence": [
         "字节一面",
@@ -1720,7 +1742,9 @@
         "[字节跳动 AI Agent研发工程师｜AI算力基础设施 27秋招面经](https://www.nowcoder.com/discuss/930155293864914944)",
         "[乐言科技一面](https://www.nowcoder.com/feed/main/detail/70faa87a0e1046a68c864a2a7c4c6789)",
         "[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)",
-        "[美团agent一面](https://www.nowcoder.com/feed/main/detail/554bdcc695ae42f8b0d78e3c44dd17d5)"
+        "[美团agent一面](https://www.nowcoder.com/feed/main/detail/554bdcc695ae42f8b0d78e3c44dd17d5)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
       ]
     },
     {
@@ -1739,6 +1763,19 @@
     },
     {
       "dimension": "04-memory-context",
+      "title": "你怎么理解 Agent 里的“状态”而不是“上下文”？",
+      "frequency": 5,
+      "firstSeenOrder": 8,
+      "evidence": [
+        "腾讯二面",
+        "阿里 Agent Infra 一面题库追问：State、Context、Memory 的区别",
+        "[百度 Agent 一面](https://www.nowcoder.com/feed/main/detail/53542e2dcfd44b1d84b0ae55b4fc1b35)",
+        "腾讯大模型应用开发二面",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
+      ]
+    },
+    {
+      "dimension": "04-memory-context",
       "title": "Agent 需要同时读知识库、调外部 API、结合用户历史偏好，怎么处理这三类上下文的优先级？",
       "frequency": 5,
       "firstSeenOrder": 69,
@@ -1748,18 +1785,6 @@
         "[字节二面（Trae）](https://www.nowcoder.com/discuss/924821959647440896)",
         "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)",
         "[9.15秋招东方财富AI应用一面](https://www.nowcoder.com/feed/main/detail/d406314e733c4fc8945637ce5d06cdcf)"
-      ]
-    },
-    {
-      "dimension": "04-memory-context",
-      "title": "你怎么理解 Agent 里的“状态”而不是“上下文”？",
-      "frequency": 4,
-      "firstSeenOrder": 8,
-      "evidence": [
-        "腾讯二面",
-        "阿里 Agent Infra 一面题库追问：State、Context、Memory 的区别",
-        "[百度 Agent 一面](https://www.nowcoder.com/feed/main/detail/53542e2dcfd44b1d84b0ae55b4fc1b35)",
-        "腾讯大模型应用开发二面"
       ]
     },
     {
@@ -1991,7 +2016,7 @@
     {
       "dimension": "04-memory-context",
       "title": "会话记忆具体是怎么实现的？滑动窗口设几轮？摘要压缩怎么触发？",
-      "frequency": 20,
+      "frequency": 21,
       "firstSeenOrder": 30,
       "evidence": [
         "高德实习一面",
@@ -2013,7 +2038,8 @@
         "[字节/AI 应用工程师 一面挂经……](https://www.nowcoder.com/discuss/933023499399024640)",
         "[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)",
         "[携程AI应用开发实习一面（OC）](https://www.nowcoder.com/discuss/933058120102739968)",
-        "社招"
+        "社招",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -2073,6 +2099,18 @@
     },
     {
       "dimension": "04-memory-context",
+      "title": "怎么实现多轮对话过程中，根据用户反馈自我调整的功能？",
+      "frequency": 4,
+      "firstSeenOrder": 39,
+      "evidence": [
+        "腾讯AI应用开发实习一面",
+        "[本轮追问](https://www.nowcoder.com/discuss/926539013991796736)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
+      ]
+    },
+    {
+      "dimension": "04-memory-context",
       "title": "长周期对话（间隔数周后继续）如何管理历史？冷启动怎么做？",
       "frequency": 3,
       "firstSeenOrder": 37,
@@ -2126,16 +2164,6 @@
     },
     {
       "dimension": "04-memory-context",
-      "title": "怎么实现多轮对话过程中，根据用户反馈自我调整的功能？",
-      "frequency": 2,
-      "firstSeenOrder": 39,
-      "evidence": [
-        "腾讯AI应用开发实习一面",
-        "[本轮追问](https://www.nowcoder.com/discuss/926539013991796736)"
-      ]
-    },
-    {
-      "dimension": "04-memory-context",
       "title": "基于滑动窗口对最近 N 轮进行摘要时，是将之前摘要和新摘要合并还是分别保留？各自适合什么场景？",
       "frequency": 2,
       "firstSeenOrder": 84,
@@ -2170,12 +2198,13 @@
     {
       "dimension": "04-memory-context",
       "title": "记忆冲突怎么解决？比如用户前后说了不同的过敏信息",
-      "frequency": 3,
+      "frequency": 4,
       "firstSeenOrder": 44,
       "evidence": [
         "美团Agent开发（智能客服方向）二面",
         "[百度 Agent 一面](https://www.nowcoder.com/feed/main/detail/53542e2dcfd44b1d84b0ae55b4fc1b35)",
-        "[去哪儿 AI 全栈 AI 面](https://www.nowcoder.com/feed/main/detail/9cf516b3c2404100baeac52564e40709)"
+        "[去哪儿 AI 全栈 AI 面](https://www.nowcoder.com/feed/main/detail/9cf516b3c2404100baeac52564e40709)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -2202,11 +2231,12 @@
     {
       "dimension": "04-memory-context",
       "title": "每轮对话都触发长期记忆存储，用户记忆快速积累、存得过多怎么办？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 48,
       "evidence": [
         "字节跳动Agent二面（Coding Agent）",
-        "[本轮追问](https://www.nowcoder.com/discuss/928253581973553152)"
+        "[本轮追问](https://www.nowcoder.com/discuss/928253581973553152)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -2276,7 +2306,7 @@
     {
       "dimension": "04-memory-context",
       "title": "跨会话记忆如何从对话中提取？哪些信息值得写入长期记忆？",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 55,
       "evidence": [
         "小红书 Agent 岗一面",
@@ -2284,7 +2314,8 @@
         "[万仞二面CEO](https://www.nowcoder.com/feed/main/detail/641608e014b147c7b8aaa3c2e4387f2c)追问：怎么让短期记忆变成长期记忆？",
         "[本轮来源](https://www.nowcoder.com/discuss/927223254320676864)",
         "[本轮来源](https://www.nowcoder.com/discuss/927594784770764800)",
-        "[9.21 货拉拉二面](https://www.nowcoder.com/feed/main/detail/ec5dba791f4f457490c373194d2f20c2)"
+        "[9.21 货拉拉二面](https://www.nowcoder.com/feed/main/detail/ec5dba791f4f457490c373194d2f20c2)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -2303,13 +2334,27 @@
     {
       "dimension": "04-memory-context",
       "title": "Agent 做上下文压缩后，如何验证没有破坏当前任务？",
-      "frequency": 4,
+      "frequency": 5,
       "firstSeenOrder": 53,
       "evidence": [
         "Coding Agent面经",
         "[字节跳动 - AI Agent 开发岗（工程方向）](https://www.nowcoder.com/discuss/926273296180547584)追问：如何设计上下文压缩策略，以及如何评估信息丢失？",
         "[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)追问：上下文压缩时怎么降低信息丢失的概率？",
-        "[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)"
+        "[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)"
+      ]
+    },
+    {
+      "dimension": "04-memory-context",
+      "title": "Codebase Memory 应该如何初始化、增量更新和失效？",
+      "frequency": 5,
+      "firstSeenOrder": 64,
+      "evidence": [
+        "[拼多多 Agent 开发岗一面](https://www.nowcoder.com/discuss/926273867092430848)",
+        "本轮追问：Memory 如何与多 Agent 架构结合？（）",
+        "[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -2355,17 +2400,6 @@
         "小红书 Agent 岗一面",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/51ff89e97d4949bd9db8e12a605b7aa9)",
         "[携程 AI 应用开发二面（已oc）](https://www.nowcoder.com/feed/main/detail/781cfc04e3bc4697acf0a5c913543a28)"
-      ]
-    },
-    {
-      "dimension": "04-memory-context",
-      "title": "Codebase Memory 应该如何初始化、增量更新和失效？",
-      "frequency": 3,
-      "firstSeenOrder": 64,
-      "evidence": [
-        "[拼多多 Agent 开发岗一面](https://www.nowcoder.com/discuss/926273867092430848)",
-        "本轮追问：Memory 如何与多 Agent 架构结合？（）",
-        "[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)"
       ]
     },
     {
@@ -2427,7 +2461,7 @@
     {
       "dimension": "05-eval-and-vision",
       "title": "如何量化评估一个上线的 Agent 好坏？除了准确率。",
-      "frequency": 20,
+      "frequency": 24,
       "firstSeenOrder": 56,
       "evidence": [
         "腾讯 Agent 岗终面；本轮追问：你如何定义一个好的 Coding Agent？（）；；本轮追问：你怎么评估生成内容的质量？除了人工评估还有哪些方法？ / 你怎么评估生成内容的“创意”程度？（）；本轮追问：你怎么评估座舱Agent的用户体验？有哪些指标？ / 你怎么评估车辆Agent的准确性？ / 你怎么评估Agent的“拟人化”程度？（）；本轮追问：你们的任务质量、效率、交互成本和效用函数如何定义？ / 你的方法相对于 baseline 的效果和 Token 节省是多少？（）",
@@ -2449,7 +2483,11 @@
         "追问：Agent输出效果如何量化评估？",
         "[PDD Agent三面](https://www.nowcoder.com/feed/main/detail/9908477cdd4041fabacbfbf02febb13c)",
         "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)",
-        "[华为AI开发二面](https://www.nowcoder.com/feed/main/detail/3b0187e22236408f90cc63dd6f9fad06)"
+        "[华为AI开发二面](https://www.nowcoder.com/feed/main/detail/3b0187e22236408f90cc63dd6f9fad06)",
+        "[深至科技一面丨全栈开发实习（医疗AI）](https://www.nowcoder.com/feed/main/detail/4dc705fe3d284276a68a86a59b1acb4f)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -2534,7 +2572,7 @@
     {
       "dimension": "05-eval-and-vision",
       "title": "你会怎么给 Agent 建立评测体系？只看最终成功率为什么不够？",
-      "frequency": 22,
+      "frequency": 24,
       "firstSeenOrder": 63,
       "evidence": [
         "[阿里淘天一面](https://www.nowcoder.com/feed/main/detail/a32b3c75644e4994933a38e1dfb16bc1)",
@@ -2558,7 +2596,9 @@
         "[字节/AI 应用工程师 一面挂经……](https://www.nowcoder.com/discuss/933023499399024640)",
         "[携程agent开发一面](https://www.nowcoder.com/feed/main/detail/0d590f82f4f243b180ee923860010b94)",
         "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)",
-        "社招"
+        "社招",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -2653,7 +2693,7 @@
     {
       "dimension": "05-eval-and-vision",
       "title": "RAG 系统如何评测？有哪些评测维度和指标？评测数据集怎么构建？",
-      "frequency": 17,
+      "frequency": 19,
       "firstSeenOrder": 68,
       "evidence": [
         "快手 AI Agent 开发一面 / ；；本轮追问：你怎么评估多模态模型的内容理解效果？评测集怎么构建？（）；本轮追问：其中的 300 条评测集是如何构建和测试的，最终结果是怎么得到的？（）；本轮追问：评测集大概多大？评测样本是怎么来的？新增场景如何更新评测集？（）；本轮追问：对于线上的元宝内容安全，你打算怎么设计检测指标？评测集打算怎么做？（）",
@@ -2672,7 +2712,9 @@
         "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)",
         "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)",
         "[9.20 汇川技术 数字化全栈工程师 一面](https://www.nowcoder.com/feed/main/detail/28032c48a90c4f69827704deb3fae34c)",
-        "[字节全栈一面](https://www.nowcoder.com/feed/main/detail/a01aeac81ad342d88252f899c47f2dc4)"
+        "[字节全栈一面](https://www.nowcoder.com/feed/main/detail/a01aeac81ad342d88252f899c47f2dc4)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -2848,7 +2890,7 @@
     {
       "dimension": "05-eval-and-vision",
       "title": "Agent 自进化闭环如何设计？怎样判断沉淀出的经验值得进入系统？",
-      "frequency": 10,
+      "frequency": 11,
       "firstSeenOrder": 33,
       "evidence": [
         "字节Agent开发实习生一面",
@@ -2860,7 +2902,8 @@
         "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
         "字节火山引擎 Managed Agent 一面追问：自动更新 AGENTS.md / Skills 后如何验证提升",
         "项目深挖",
-        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)"
+        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)",
+        "[阿里云 Agent开发 一二面](https://www.nowcoder.com/feed/main/detail/fee780e1140147fbbad0f23a74e265c6)"
       ]
     },
     {
@@ -2983,6 +3026,17 @@
     },
     {
       "dimension": "05-eval-and-vision",
+      "title": "如何判断用户反馈真的让 Agent 变好，而不是噪声或选择偏差？",
+      "frequency": 3,
+      "firstSeenOrder": 39,
+      "evidence": [
+        "MiniMax平台研发一面",
+        "[本轮追问](https://www.nowcoder.com/discuss/927381090602348544)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "05-eval-and-vision",
       "title": "哪些业务场景不适合引入 Agent？",
       "frequency": 3,
       "firstSeenOrder": 50,
@@ -2990,6 +3044,17 @@
         "[虾皮测开日常实习一面](https://www.nowcoder.com/discuss/927594784770764800)",
         "本轮追问：Agent 的业务场景是什么？（）",
         "[去哪儿ai应用技术面（挂）](https://www.nowcoder.com/feed/main/detail/e79fbb2d602641569079523ef84445fe)"
+      ]
+    },
+    {
+      "dimension": "05-eval-and-vision",
+      "title": "如何设计消融实验并判断模块贡献？",
+      "frequency": 3,
+      "firstSeenOrder": 51,
+      "evidence": [
+        "[美团面经-美团算法岗面经-01](https://www.nowcoder.com/discuss/927381090602348544)",
+        "[字节算法（Agent）凉经](https://www.nowcoder.com/feed/main/detail/6d80836574e647d39eb9842dc4131ace)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -3015,32 +3080,12 @@
     },
     {
       "dimension": "05-eval-and-vision",
-      "title": "如何判断用户反馈真的让 Agent 变好，而不是噪声或选择偏差？",
-      "frequency": 2,
-      "firstSeenOrder": 39,
-      "evidence": [
-        "MiniMax平台研发一面",
-        "[本轮追问](https://www.nowcoder.com/discuss/927381090602348544)"
-      ]
-    },
-    {
-      "dimension": "05-eval-and-vision",
       "title": "评审 Agent 为什么要左移？应该左移到需求、设计还是编码阶段？",
       "frequency": 2,
       "firstSeenOrder": 40,
       "evidence": [
         "字节社招一面",
         "[本轮追问](https://www.nowcoder.com/discuss/927597050630270976)"
-      ]
-    },
-    {
-      "dimension": "05-eval-and-vision",
-      "title": "如何设计消融实验并判断模块贡献？",
-      "frequency": 2,
-      "firstSeenOrder": 51,
-      "evidence": [
-        "[美团面经-美团算法岗面经-01](https://www.nowcoder.com/discuss/927381090602348544)",
-        "[字节算法（Agent）凉经](https://www.nowcoder.com/feed/main/detail/6d80836574e647d39eb9842dc4131ace)"
       ]
     },
     {
@@ -3350,14 +3395,15 @@
     {
       "dimension": "06-multi-agent-collab",
       "title": "子 Agent 之间的上下文怎么传递？传什么、不传什么？",
-      "frequency": 5,
+      "frequency": 6,
       "firstSeenOrder": 21,
       "evidence": [
         "阿里Agent面经",
         "[阿里边缘bu 秋招一面 （已过）](https://www.nowcoder.com/feed/main/detail/bdebbb6088b6405e9eb2bd2c345acb6e)追问：各层 Agent 之间的上下文如何传递？；如何保证传给子 Agent 的上下文足够完整，不会遗漏关键信息？",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/6a7fbdcf484a4b2bbe4b900b2dbd5750)",
         "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)",
-        "[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)"
+        "[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -3528,7 +3574,7 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "Agent 的成本怎么控制？线上烧钱太快怎么办？",
-      "frequency": 11,
+      "frequency": 12,
       "firstSeenOrder": 73,
       "evidence": [
         "[百度Agent二面，不看简历不问八股](https://www.nowcoder.com/feed/main/detail/c7f00d0e48aa4017911b46ed928d15f3)",
@@ -3541,7 +3587,8 @@
         "[百度 - Agent 研发岗（架构方向）](https://www.nowcoder.com/discuss/926273622006665216)",
         "[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)",
         "[腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)",
-        "社招"
+        "社招",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -3633,7 +3680,7 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "如何保证 AI 代码生成的质量与掌控性？",
-      "frequency": 20,
+      "frequency": 24,
       "firstSeenOrder": 12,
       "evidence": [
         "蚂蚁一面",
@@ -3655,13 +3702,17 @@
         "[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)",
         "[9.15秋招东方财富AI应用一面](https://www.nowcoder.com/feed/main/detail/d406314e733c4fc8945637ce5d06cdcf)",
         "[腾讯三面面经](https://www.nowcoder.com/feed/main/detail/431b4ca35c7f43909219d31aebba5b56)",
-        "社招"
+        "社招",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)",
+        "[美团ai全栈二面](https://www.nowcoder.com/feed/main/detail/064725eb6da14cda9efabb2a51a68681)"
       ]
     },
     {
       "dimension": "07-engineering-pitfalls",
       "title": "如何解决大模型 API 服务的响应延迟问题？",
-      "frequency": 9,
+      "frequency": 10,
       "firstSeenOrder": 79,
       "evidence": [
         "字节 Agent 实习一面  / ；本轮追问：座舱场景对延迟要求极高，怎么优化Agent的响应速度？（）；本轮追问：多 Agent 编排的“响应慢”问题如何解决（）",
@@ -3672,7 +3723,8 @@
         "小舒一面追问：异步调用与线程阻塞",
         "追问：如何提高大模型响应速度？",
         "[9/4泰隆一面](https://www.nowcoder.com/feed/main/detail/738ff92bcd9049c5afc32d8f63226b79)",
-        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/724b6bc0f02b42e58ff7397be51df3b5)"
+        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/724b6bc0f02b42e58ff7397be51df3b5)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -3799,22 +3851,24 @@
     },
     {
       "dimension": "07-engineering-pitfalls",
+      "title": "开发 Agent 的时候，你用的是什么开发流程？为什么选这个流程？",
+      "frequency": 4,
+      "firstSeenOrder": 90,
+      "evidence": [
+        "字节 Agent 开发实习一面",
+        "[阿里云 SOC Agent Infra 一面](https://www.nowcoder.com/feed/main/detail/1bde9ba913d74ca6847962f679865f7e)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
+      ]
+    },
+    {
+      "dimension": "07-engineering-pitfalls",
       "title": "AI 应用的前端资源缓存怎么配的？",
       "frequency": 2,
       "firstSeenOrder": 23,
       "evidence": [
         "百度实习一面",
         "百度实习 AI 应用开发一面"
-      ]
-    },
-    {
-      "dimension": "07-engineering-pitfalls",
-      "title": "开发 Agent 的时候，你用的是什么开发流程？为什么选这个流程？",
-      "frequency": 2,
-      "firstSeenOrder": 90,
-      "evidence": [
-        "字节 Agent 开发实习一面",
-        "[阿里云 SOC Agent Infra 一面](https://www.nowcoder.com/feed/main/detail/1bde9ba913d74ca6847962f679865f7e)"
       ]
     },
     {
@@ -3931,7 +3985,7 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "Agent 系统可观测性设计——怎样的结构才能更好地追踪整个 Trace？",
-      "frequency": 14,
+      "frequency": 15,
       "firstSeenOrder": 36,
       "evidence": [
         "美团Agent开发（智能客服方向）二面",
@@ -3947,13 +4001,14 @@
         "[快手大模型agent研发一面](https://www.nowcoder.com/discuss/932315325276618752)",
         "[腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)",
         "[腾讯二面面经](https://www.nowcoder.com/feed/main/detail/12b18eae310d4b7eadd896aef7f4a712)",
-        "社招"
+        "社招",
+        "[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)"
       ]
     },
     {
       "dimension": "07-engineering-pitfalls",
       "title": "SSE 流式输出中断后如何保证之前的输出不丢失？",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 38,
       "evidence": [
         "某教育agent开发",
@@ -3961,19 +4016,21 @@
         "[字节跳动 - AI Agent 开发岗（工程方向）](https://www.nowcoder.com/discuss/926273296180547584)追问：如何设计 SSE 流式输出网关，处理断线重连和消息重放？",
         "[百度 - Agent 研发岗（架构方向）](https://www.nowcoder.com/discuss/926273622006665216)追问：如何设计 SSE 流式网关，处理断线重连和消息重放？",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/612a1c20eea744a288b142f5b43f57e1)",
-        "[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)"
+        "[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
       ]
     },
     {
       "dimension": "07-engineering-pitfalls",
       "title": "产品的用户量、每日 token 消耗和底层模型选型怎么估算？",
-      "frequency": 4,
+      "frequency": 5,
       "firstSeenOrder": 34,
       "evidence": [
         "快手AI应用开发一面",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/11e40634018b47a7974bf5c96605024c)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/5f08a2b54559471aac95ea8009d38403)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/cd9443129c2a4b05ad4e6b630bf46ad6)"
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/cd9443129c2a4b05ad4e6b630bf46ad6)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -4063,7 +4120,7 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "多模型如何动态路由？根据视频特征、任务特征、成本、延迟和效果选模型？",
-      "frequency": 9,
+      "frequency": 13,
       "firstSeenOrder": 52,
       "evidence": [
         "商汤大模型算法应用实习二面",
@@ -4074,7 +4131,11 @@
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/14fe3975c0464b02bb58b24be1b63a21)",
         "[携程 AI 应用开发二面（已oc）](https://www.nowcoder.com/feed/main/detail/781cfc04e3bc4697acf0a5c913543a28)",
         "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)",
-        "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)"
+        "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -4251,11 +4312,22 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "多模型供应商如何抽象统一 Provider，而不丢失差异能力？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 61,
       "evidence": [
         "成都晓多科技 Agent开发岗二面",
-        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)"
+        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
+      ]
+    },
+    {
+      "dimension": "07-engineering-pitfalls",
+      "title": "大型项目重构如何规划，如何处理模块正交与冗余？",
+      "frequency": 2,
+      "firstSeenOrder": 72,
+      "evidence": [
+        "[阿里控股 AI全栈开发 二面](https://www.nowcoder.com/feed/main/detail/a11a3a9e0d824969b44db5bb2149ef9f)",
+        "[字节 260907 一面面经](https://www.nowcoder.com/discuss/935858952644939776)"
       ]
     },
     {
@@ -4297,10 +4369,11 @@
     {
       "dimension": "07-engineering-pitfalls",
       "title": "如何统计 Agent 各模块耗时并定位瓶颈？",
-      "frequency": 1,
+      "frequency": 2,
       "firstSeenOrder": 70,
       "evidence": [
-        "[寒武纪AI应用开发一面&二面](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)"
+        "[寒武纪AI应用开发一面&二面](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -4310,15 +4383,6 @@
       "firstSeenOrder": 71,
       "evidence": [
         "[汇川技术一面](https://www.nowcoder.com/feed/main/detail/6a241d73effc4540a857a752d987a6f8)"
-      ]
-    },
-    {
-      "dimension": "07-engineering-pitfalls",
-      "title": "大型项目重构如何规划，如何处理模块正交与冗余？",
-      "frequency": 1,
-      "firstSeenOrder": 72,
-      "evidence": [
-        "[阿里控股 AI全栈开发 二面](https://www.nowcoder.com/feed/main/detail/a11a3a9e0d824969b44db5bb2149ef9f)"
       ]
     },
     {
@@ -4613,6 +4677,20 @@
     },
     {
       "dimension": "08-prompt-engineering",
+      "title": "如何让大模型从混乱的非结构化文档中稳定提取结构化 JSON？",
+      "frequency": 6,
+      "firstSeenOrder": 36,
+      "evidence": [
+        "[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)",
+        "本轮追问：让大模型稳定输出结构化数据，如JSON是AI应用开发常见需求，但模型有时会输出多余的解释文字或格式不合法，你会用哪些手段提升结构化输出的稳定性和可解析性？ / 如果在提示词里已经明确要求只输出JSON不要额外解释，但模型依然在JSON前后附带自然语言说明，你会用什么方式处理这类输出？ / 模型输出的JSON本身存在转义错误、括号不匹配，这类语法问题导致正则也无法准确截取合法片段，你会怎么处理？（）；本轮追问：大模型稳定输出结构化 JSON，经常出现多余文字、格式非法，你会用哪些手段提升结构化输出稳定性与可解析性？ / 输出 JSON 缺失必填字段你会怎么处理？（）",
+        "[中兴未来领军计划AI算法一面](https://www.nowcoder.com/discuss/932316204088180736)",
+        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/724b6bc0f02b42e58ff7397be51df3b5)",
+        "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)",
+        "[字节 260907 一面面经](https://www.nowcoder.com/discuss/935858952644939776)"
+      ]
+    },
+    {
+      "dimension": "08-prompt-engineering",
       "title": "Skill 和 Agent 的关系，为什么不用 Skill 而用子 Agent？",
       "frequency": 5,
       "firstSeenOrder": 22,
@@ -4622,19 +4700,6 @@
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/b3ca025c64914a259b878ede711b6aed)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/bfd43b5c66784add8fbf5893c164697a)",
         "[8.25 小红书实习 AI全栈开发实习一面挂凉经](https://www.nowcoder.com/feed/main/detail/c712eda7fbf44ba69835b6dd2ff7fc4c)"
-      ]
-    },
-    {
-      "dimension": "08-prompt-engineering",
-      "title": "如何让大模型从混乱的非结构化文档中稳定提取结构化 JSON？",
-      "frequency": 5,
-      "firstSeenOrder": 36,
-      "evidence": [
-        "[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)",
-        "本轮追问：让大模型稳定输出结构化数据，如JSON是AI应用开发常见需求，但模型有时会输出多余的解释文字或格式不合法，你会用哪些手段提升结构化输出的稳定性和可解析性？ / 如果在提示词里已经明确要求只输出JSON不要额外解释，但模型依然在JSON前后附带自然语言说明，你会用什么方式处理这类输出？ / 模型输出的JSON本身存在转义错误、括号不匹配，这类语法问题导致正则也无法准确截取合法片段，你会怎么处理？（）；本轮追问：大模型稳定输出结构化 JSON，经常出现多余文字、格式非法，你会用哪些手段提升结构化输出稳定性与可解析性？ / 输出 JSON 缺失必填字段你会怎么处理？（）",
-        "[中兴未来领军计划AI算法一面](https://www.nowcoder.com/discuss/932316204088180736)",
-        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/724b6bc0f02b42e58ff7397be51df3b5)",
-        "[恒生电子技术岗ai面](https://www.nowcoder.com/feed/main/detail/49a60657cf63400897542e731c3feae4)"
       ]
     },
     {
@@ -4785,7 +4850,7 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "RAG 的检索如何实现？",
-      "frequency": 6,
+      "frequency": 8,
       "firstSeenOrder": 1,
       "evidence": [
         "阿里一面",
@@ -4793,7 +4858,9 @@
         "阿里 AI Agent 开发一面；；本轮追问：你的父子切割具体是如何实现的？（）",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/a8854ce3fa4b45cb8d73ec92c798a63b)",
         "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)",
-        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)"
+        "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)",
+        "[多益网络面试](https://www.nowcoder.com/discuss/935573069089820672)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
       ]
     },
     {
@@ -4832,7 +4899,7 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "RAG 中如何提高文档召回率？",
-      "frequency": 10,
+      "frequency": 11,
       "firstSeenOrder": 13,
       "evidence": [
         "蚂蚁一面",
@@ -4844,7 +4911,8 @@
         "[九方智投 一面凉经](https://www.nowcoder.com/feed/main/detail/92efed84eb68493d82132e03b7e43ae0)",
         "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)",
         "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/724b6bc0f02b42e58ff7397be51df3b5)",
-        "[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)"
+        "[字节 AI Agent 开发 一面（抖音电商 · 一面掉池子里面了）](https://www.nowcoder.com/discuss/932407145864130560)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
       ]
     },
     {
@@ -4888,6 +4956,18 @@
     },
     {
       "dimension": "09-rag-retrieval",
+      "title": "什么是嵌入（Embedding）？为什么 RAG 系统需要将文本转为向量？",
+      "frequency": 4,
+      "firstSeenOrder": 87,
+      "evidence": [
+        "携程 Agent 开发实习一面",
+        "[中兴未来领军计划AI算法一面](https://www.nowcoder.com/discuss/932316204088180736)",
+        "[字节全栈一面](https://www.nowcoder.com/feed/main/detail/a01aeac81ad342d88252f899c47f2dc4)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
+      ]
+    },
+    {
+      "dimension": "09-rag-retrieval",
       "title": "Embedding 和 ReRank 模型具体怎么做的微调？",
       "frequency": 3,
       "firstSeenOrder": 83,
@@ -4895,17 +4975,6 @@
         "腾讯 AI 应用开发",
         "腾讯AI应用开发一面追问：重排序完整实现流程",
         "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)"
-      ]
-    },
-    {
-      "dimension": "09-rag-retrieval",
-      "title": "什么是嵌入（Embedding）？为什么 RAG 系统需要将文本转为向量？",
-      "frequency": 3,
-      "firstSeenOrder": 87,
-      "evidence": [
-        "携程 Agent 开发实习一面",
-        "[中兴未来领军计划AI算法一面](https://www.nowcoder.com/discuss/932316204088180736)",
-        "[字节全栈一面](https://www.nowcoder.com/feed/main/detail/a01aeac81ad342d88252f899c47f2dc4)"
       ]
     },
     {
@@ -4967,6 +5036,15 @@
     },
     {
       "dimension": "09-rag-retrieval",
+      "title": "如果 RAG 返回了看似可信但实际过时的信息，你会怎么降低 Agent 被误导的概率？",
+      "frequency": 1,
+      "firstSeenOrder": 96,
+      "evidence": [
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "09-rag-retrieval",
       "title": "RAG 在 Agent 体系里应该被看成工具、记忆，还是推理前置步骤？",
       "frequency": 0,
       "firstSeenOrder": 93,
@@ -4981,15 +5059,8 @@
     },
     {
       "dimension": "09-rag-retrieval",
-      "title": "如果 RAG 返回了看似可信但实际过时的信息，你会怎么降低 Agent 被误导的概率？",
-      "frequency": 0,
-      "firstSeenOrder": 96,
-      "evidence": []
-    },
-    {
-      "dimension": "09-rag-retrieval",
       "title": "为什么在检索阶段引入BM25？它和向量检索怎样组合？",
-      "frequency": 12,
+      "frequency": 15,
       "firstSeenOrder": 97,
       "evidence": [
         "快手 AI Agent 开发一面",
@@ -5003,7 +5074,10 @@
         "[虾皮Agent一面](https://www.nowcoder.com/feed/main/detail/409dc8793a7b450eb51ee32c2b923d49)",
         "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)",
         "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)",
-        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)"
+        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[多益网络面试](https://www.nowcoder.com/discuss/935573069089820672)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -5063,7 +5137,7 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "分块策略怎么设计？不同策略的优缺点？",
-      "frequency": 16,
+      "frequency": 17,
       "firstSeenOrder": 29,
       "evidence": [
         "高德 AI 应用开发实习一面",
@@ -5081,7 +5155,8 @@
         "[浙江未讯科技](https://www.nowcoder.com/feed/main/detail/b6822699408a4ab1906c32a1e0fc7517)",
         "[字节 Agent 秋招二面](https://www.nowcoder.com/discuss/932657562825027584)",
         "[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)",
-        "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)"
+        "[小红书 Product Engineer（AI与全栈方向）-社区工程 一面面经](https://www.nowcoder.com/feed/main/detail/70ad5ead2f784676b0b399eab877d3d4)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -5222,7 +5297,7 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "PDF 解析用什么工具？Layout-aware Parsing 是怎么做的？",
-      "frequency": 7,
+      "frequency": 9,
       "firstSeenOrder": 34,
       "evidence": [
         "腾讯AI应用开发二面",
@@ -5231,13 +5306,15 @@
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/a8854ce3fa4b45cb8d73ec92c798a63b)",
         "[阳光电源  AI应用开发工程师 一面](https://www.nowcoder.com/feed/main/detail/122fd928ee824ed99c8f834233d1ac23)",
         "[字节全栈一面](https://www.nowcoder.com/feed/main/detail/a01aeac81ad342d88252f899c47f2dc4)",
-        "[拼多多 agent 一面凉经](https://www.nowcoder.com/feed/main/detail/4dd4b979b1f74625aaef3e7b975142ba)"
+        "[拼多多 agent 一面凉经](https://www.nowcoder.com/feed/main/detail/4dd4b979b1f74625aaef3e7b975142ba)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
       "dimension": "09-rag-retrieval",
       "title": "向量数据库中 IVF_FLAT 和 HNSW 索引的区别是什么？各自适合什么场景？",
-      "frequency": 7,
+      "frequency": 8,
       "firstSeenOrder": 100,
       "evidence": [
         "快手AI应用开发一面",
@@ -5246,7 +5323,8 @@
         "追问：你的 RAG 向量数据库用的索引是什么？",
         "[全栈实习一面，20分钟居然问这么细😂](https://www.nowcoder.com/feed/main/detail/4af1e257116e4e36970c6e0d8bf2f70e)",
         "[奇怪の字节二面面经（大概率凉经）](https://www.nowcoder.com/feed/main/detail/bcf0b8497fcb4982b2292cafbcb08d69)",
-        "[华为AI开发一面](https://www.nowcoder.com/feed/main/detail/bb07b66e5c434b08992bf8747dd7bd3e)"
+        "[华为AI开发一面](https://www.nowcoder.com/feed/main/detail/bb07b66e5c434b08992bf8747dd7bd3e)",
+        "[字节 260907 一面面经](https://www.nowcoder.com/discuss/935858952644939776)"
       ]
     },
     {
@@ -5302,6 +5380,17 @@
     },
     {
       "dimension": "09-rag-retrieval",
+      "title": "RAG 知识库的噪声剔除和文档去重怎么做？",
+      "frequency": 3,
+      "firstSeenOrder": 35,
+      "evidence": [
+        "腾讯AI应用开发二面",
+        "淘天Agent开发追问：防止AI批量生成虚假数据投毒",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)"
+      ]
+    },
+    {
+      "dimension": "09-rag-retrieval",
       "title": "Agentic RAG 是什么？和传统 RAG 的核心区别？",
       "frequency": 3,
       "firstSeenOrder": 39,
@@ -5313,22 +5402,13 @@
     },
     {
       "dimension": "09-rag-retrieval",
-      "title": "RAG 知识库的噪声剔除和文档去重怎么做？",
-      "frequency": 2,
-      "firstSeenOrder": 35,
-      "evidence": [
-        "腾讯AI应用开发二面",
-        "淘天Agent开发追问：防止AI批量生成虚假数据投毒"
-      ]
-    },
-    {
-      "dimension": "09-rag-retrieval",
       "title": "补充检索是如何评估数据质量并触发的？怎么保证二次检索能搜到之前没搜到的内容？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 42,
       "evidence": [
         "淘天Agent开发",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)"
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -5404,7 +5484,7 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "笔试题：多路召回结果合并去重 + 加权排序 + TopK",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 54,
       "evidence": [
         "[作业帮秋招一面](https://www.nowcoder.com/feed/main/detail/c86c7591ba9d47b696774ddb48cdc9cb)追问：两路检索得到的召回结果如何做结果融合？",
@@ -5412,7 +5492,8 @@
         "[本轮追问](https://www.nowcoder.com/discuss/927381090602348544)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/439125efe93b460baea2f71a5d454650)",
-        "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)"
+        "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -5477,26 +5558,43 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "处理一万个长文档构建 RAG 知识库，工程上怎么做？",
-      "frequency": 4,
+      "frequency": 5,
       "firstSeenOrder": 56,
       "evidence": [
         "阿里Agent面经·场景题",
         "阿里 Agent 面经（场景题）",
         "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)",
-        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)"
+        "[杭州微链词元  AI应用开发](https://www.nowcoder.com/feed/main/detail/0fa200b70a5442f2aad559323802d889)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
       ]
     },
     {
       "dimension": "09-rag-retrieval",
       "title": "RAG 知识库更新怎么不停服？热更新方案怎么设计？",
-      "frequency": 5,
+      "frequency": 6,
       "firstSeenOrder": 57,
       "evidence": [
         "腾讯AI应用开发",
         "[抖音电商Agent全栈开发工程师一面](https://www.nowcoder.com/discuss/925066865183858688)追问：更新是每天全量跑一遍吗？",
         "[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)",
         "[美团AI Agent一面](https://www.nowcoder.com/feed/main/detail/50bcdc47e7754aa7be59b6318fea514b)",
-        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)"
+        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
+      ]
+    },
+    {
+      "dimension": "09-rag-retrieval",
+      "title": "基于关键词的命令行代码搜索与基于 Embedding/RAG 的代码搜索，各有什么优缺点？",
+      "frequency": 7,
+      "firstSeenOrder": 60,
+      "evidence": [
+        "某小厂FOSHO AI应用开发二面",
+        "某小厂FOSHO/AI应用开发二面；本轮追问：你的搜索引擎和直接使用云博客搜索有什么区别？（）；本轮追问：code agent 怎么根据 PRD 的描述定位到要修改的代码？（）；本轮追问：如何基于 AST 识别代码中的硬编码路径？（）",
+        "[本轮追问](https://www.nowcoder.com/discuss/927223254320676864)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)",
+        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -5515,20 +5613,6 @@
     },
     {
       "dimension": "09-rag-retrieval",
-      "title": "基于关键词的命令行代码搜索与基于 Embedding/RAG 的代码搜索，各有什么优缺点？",
-      "frequency": 6,
-      "firstSeenOrder": 60,
-      "evidence": [
-        "某小厂FOSHO AI应用开发二面",
-        "某小厂FOSHO/AI应用开发二面；本轮追问：你的搜索引擎和直接使用云博客搜索有什么区别？（）；本轮追问：code agent 怎么根据 PRD 的描述定位到要修改的代码？（）；本轮追问：如何基于 AST 识别代码中的硬编码路径？（）",
-        "[本轮追问](https://www.nowcoder.com/discuss/927223254320676864)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/77660a0c109d42f89001980a8f94c1a6)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)",
-        "[淘天供应链ai应用研发一面](https://www.nowcoder.com/feed/main/detail/8656f1483ebd441bac7c17c313e5394a)"
-      ]
-    },
-    {
-      "dimension": "09-rag-retrieval",
       "title": "RRF（Reciprocal Rank Fusion）是什么？如何融合多路检索结果？",
       "frequency": 5,
       "firstSeenOrder": 110,
@@ -5543,12 +5627,23 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "知识图谱如何从文档构建、增量维护，并处理实体与关系冲突？",
-      "frequency": 3,
+      "frequency": 4,
       "firstSeenOrder": 65,
       "evidence": [
         "阿里云暑期 Agent 面经",
         "[抖音电商Agent全栈开发工程师一面](https://www.nowcoder.com/discuss/925066865183858688)追问：知识构建与图谱抽取怎么做？；更新时实体抽取和关系关联怎么处理？",
-        "[携程agent开发一面](https://www.nowcoder.com/feed/main/detail/0d590f82f4f243b180ee923860010b94)"
+        "[携程agent开发一面](https://www.nowcoder.com/feed/main/detail/0d590f82f4f243b180ee923860010b94)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "09-rag-retrieval",
+      "title": "MMR 为什么还能提高效果？重排后为什么还要设置 MMR 截断？",
+      "frequency": 2,
+      "firstSeenOrder": 59,
+      "evidence": [
+        "深势科技一面",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -5589,15 +5684,6 @@
       "evidence": [
         "[9.21 浩鲸科技 二面](https://www.nowcoder.com/discuss/931582068503347200)",
         "[快手电商大模型应用开发一面（已offer）](https://www.nowcoder.com/feed/main/detail/acc9c99b46e7489386bab12b47b56c11)"
-      ]
-    },
-    {
-      "dimension": "09-rag-retrieval",
-      "title": "MMR 为什么还能提高效果？重排后为什么还要设置 MMR 截断？",
-      "frequency": 1,
-      "firstSeenOrder": 59,
-      "evidence": [
-        "深势科技一面"
       ]
     },
     {
@@ -5657,10 +5743,11 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "BGE 类文本 Embedding 模型的基本结构是什么？",
-      "frequency": 1,
+      "frequency": 2,
       "firstSeenOrder": 79,
       "evidence": [
-        "[腾讯音乐面经-腾讯音乐算法岗面经-01](https://www.nowcoder.com/discuss/926677767104532480)"
+        "[腾讯音乐面经-腾讯音乐算法岗面经-01](https://www.nowcoder.com/discuss/926677767104532480)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -5720,10 +5807,11 @@
     {
       "dimension": "09-rag-retrieval",
       "title": "Reranker 的原理、效果上限与评估方法是什么？",
-      "frequency": 1,
+      "frequency": 2,
       "firstSeenOrder": 113,
       "evidence": [
-        "[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)"
+        "[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -5756,7 +5844,7 @@
     {
       "dimension": "10-training-and-data",
       "title": "预训练数据清洗方法？",
-      "frequency": 11,
+      "frequency": 13,
       "firstSeenOrder": 1,
       "evidence": [
         "字节一面",
@@ -5769,7 +5857,25 @@
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/2981f94b70954a38bd30804a7a3071af)",
         "[华为 一面 车BU 多模态大模型 AI算法工程师](https://www.nowcoder.com/feed/main/detail/3f64d287fcab43979808e9441d130ef0)",
         "[快手电商大模型应用开发一面（已offer）](https://www.nowcoder.com/feed/main/detail/acc9c99b46e7489386bab12b47b56c11)",
-        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)"
+        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)",
+        "[美团 正式批 二面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/e8d80550c54142998826415f0de258a0)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "自动标注系统的主要难点是什么？如何设计模型预标注、置信度分流和人工复核闭环？",
+      "frequency": 8,
+      "firstSeenOrder": 75,
+      "evidence": [
+        "[字节 Seed 具身数据一面](https://www.nowcoder.com/feed/main/detail/657dfac8ca5c49f28492a1110b95f7cd)",
+        "[百度具身研发一面](https://www.nowcoder.com/feed/main/detail/258695ecdfbb464790fc8ae55c9f1661)追问：标注相关，有做过自动化标注吗？",
+        "本轮追问：为什么把置信度阈值设为 0.8？（）；本轮追问：整个训练是开环还是闭环？（）；本轮追问：置信度低会进行重试，如果重试后置信度还是很低，有没有做什么方案解决这个问题？（）；本轮追问：如何降低自动化扫描产生的误报？安全场景中漏报和误报哪个更严重？（）",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/14fe3975c0464b02bb58b24be1b63a21)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/2981f94b70954a38bd30804a7a3071af)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/8f0f005a1f7a48958ac5f07bea3c5d88)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)"
       ]
     },
     {
@@ -5786,21 +5892,6 @@
         "[字节 Seed 具身数据一面](https://www.nowcoder.com/feed/main/detail/657dfac8ca5c49f28492a1110b95f7cd)",
         "追问：长尾样本对齐",
         "[Momenta 大模型算法工程师一面](https://www.nowcoder.com/feed/main/detail/f7518c865e07491cb1518d288698813c)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "自动标注系统的主要难点是什么？如何设计模型预标注、置信度分流和人工复核闭环？",
-      "frequency": 7,
-      "firstSeenOrder": 75,
-      "evidence": [
-        "[字节 Seed 具身数据一面](https://www.nowcoder.com/feed/main/detail/657dfac8ca5c49f28492a1110b95f7cd)",
-        "[百度具身研发一面](https://www.nowcoder.com/feed/main/detail/258695ecdfbb464790fc8ae55c9f1661)追问：标注相关，有做过自动化标注吗？",
-        "本轮追问：为什么把置信度阈值设为 0.8？（）；本轮追问：整个训练是开环还是闭环？（）；本轮追问：置信度低会进行重试，如果重试后置信度还是很低，有没有做什么方案解决这个问题？（）；本轮追问：如何降低自动化扫描产生的误报？安全场景中漏报和误报哪个更严重？（）",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/14fe3975c0464b02bb58b24be1b63a21)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/2981f94b70954a38bd30804a7a3071af)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/8f0f005a1f7a48958ac5f07bea3c5d88)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)"
       ]
     },
     {
@@ -5834,7 +5925,7 @@
     {
       "dimension": "10-training-and-data",
       "title": "DPO、PPO、GRPO 的区别和优缺点？",
-      "frequency": 19,
+      "frequency": 20,
       "firstSeenOrder": 5,
       "evidence": [
         "阿里国际一面追问：PPO vs GRPO 深度对比",
@@ -5855,7 +5946,8 @@
         "[华为 一面 车BU 多模态大模型 AI算法工程师](https://www.nowcoder.com/feed/main/detail/3f64d287fcab43979808e9441d130ef0)",
         "[9.18快手可灵策略梯度岗一面](https://www.nowcoder.com/discuss/933402920173699072)",
         "[小红书广告交易算法日常实习面经](https://www.nowcoder.com/feed/main/detail/e91bea35822a44cda5192ea9c5efea0d)",
-        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)"
+        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
+        "[9.18号合合信息多模态大模型算法研究员-一面](https://www.nowcoder.com/discuss/933406132259868672)"
       ]
     },
     {
@@ -5961,7 +6053,7 @@
     {
       "dimension": "10-training-and-data",
       "title": "大模型推理加速技术有哪些？",
-      "frequency": 9,
+      "frequency": 10,
       "firstSeenOrder": 16,
       "evidence": [
         "阿里国际二面追问：推理服务部署/算子融合/IO 优化",
@@ -5972,7 +6064,8 @@
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)",
         "[小红书多模态秋招二面](https://www.nowcoder.com/discuss/930755993066041344)",
-        "[云鼎科技 nlp/机器学习面经](https://www.nowcoder.com/feed/main/detail/2dc11570227c4a90b70b996469b0b6c1)"
+        "[云鼎科技 nlp/机器学习面经](https://www.nowcoder.com/feed/main/detail/2dc11570227c4a90b70b996469b0b6c1)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -6125,6 +6218,18 @@
     },
     {
       "dimension": "10-training-and-data",
+      "title": "GQA 和 MLA 的原理是什么？各自解决什么问题？",
+      "frequency": 4,
+      "firstSeenOrder": 32,
+      "evidence": [
+        "阿里国际AI算法一面",
+        "[本轮追问](https://www.nowcoder.com/discuss/927969546672046080)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
       "title": "什么是灾难性遗忘？微调时如何缓解？",
       "frequency": 4,
       "firstSeenOrder": 34,
@@ -6179,17 +6284,6 @@
         "字节二面",
         "淘天Agent开发同题：传统CNN痛点+ResNet核心思想",
         "字节后端 Agent 开发二面"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "GQA 和 MLA 的原理是什么？各自解决什么问题？",
-      "frequency": 3,
-      "firstSeenOrder": 32,
-      "evidence": [
-        "阿里国际AI算法一面",
-        "[本轮追问](https://www.nowcoder.com/discuss/927969546672046080)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)"
       ]
     },
     {
@@ -6336,7 +6430,7 @@
     {
       "dimension": "10-training-and-data",
       "title": "客服 Agent 的奖励函数有 Reward Hacking、稀疏、区分度太大（只有完全正确和错误）三个问题，请设计新的 reward 解决至少两个。",
-      "frequency": 10,
+      "frequency": 11,
       "firstSeenOrder": 146,
       "evidence": [
         "阿里暑期Agent算法二面",
@@ -6348,7 +6442,8 @@
         "追问：Reward Hacking 的检测与纠正？",
         "[阶跃星辰（Stepfun）- 大模型算法岗（Post-train）](https://www.nowcoder.com/discuss/926273007276814336)",
         "追问：对于DDPG项目的reward，你是如何设计的？",
-        "[百度 正式批 二面 端到端决策规划控制算法工程师](https://www.nowcoder.com/feed/main/detail/af692c37e31d437292d4881b58b24e56)"
+        "[百度 正式批 二面 端到端决策规划控制算法工程师](https://www.nowcoder.com/feed/main/detail/af692c37e31d437292d4881b58b24e56)",
+        "[9.18号合合信息多模态大模型算法研究员-一面](https://www.nowcoder.com/discuss/933406132259868672)"
       ]
     },
     {
@@ -6405,22 +6500,8 @@
     },
     {
       "dimension": "10-training-and-data",
-      "title": "为什么 Step-level SFT 之后再进行 GRPO，通常比直接从基座模型开始做 GRPO 稳定？",
-      "frequency": 6,
-      "firstSeenOrder": 49,
-      "evidence": [
-        "唯品会NLP算法实习一面",
-        "[百度正式批：一面结束第二天就约二面了](https://www.nowcoder.com/discuss/925108144831725568)追问：SFT和GRPO是分两阶段的吗？",
-        "[MiniMax - 大模型算法岗（后训练 / SFT / RL 方向，独角兽）](https://www.nowcoder.com/discuss/925527528259743744)追问：SFT 的作用是什么？为什么通常先做 SFT 再做强化学习？",
-        "[MiniMax - 大模型算法岗（后训练 / SFT / RL）](https://www.nowcoder.com/discuss/926272883872075776)追问：SFT 的作用及为何先 SFT 后 RL？",
-        "唯品会/NLP算法实习一面 [1/2]",
-        "唯品会/NLP算法实习一面 [2/2]"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
       "title": "Transformer 的整体架构、核心模块与实现流程是什么？",
-      "frequency": 6,
+      "frequency": 7,
       "firstSeenOrder": 151,
       "evidence": [
         "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
@@ -6428,7 +6509,51 @@
         "本轮追问：transformer前馈神经网络的结构，为什么会先提升维度后缩小维度（）；本轮追问：Transformer 的底层原理是什么？为什么以前的卷积神经网络难以实现现在大模型的能力？（）",
         "[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)",
         "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
-        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)"
+        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "为什么 Step-level SFT 之后再进行 GRPO，通常比直接从基座模型开始做 GRPO 稳定？",
+      "frequency": 7,
+      "firstSeenOrder": 49,
+      "evidence": [
+        "唯品会NLP算法实习一面",
+        "[百度正式批：一面结束第二天就约二面了](https://www.nowcoder.com/discuss/925108144831725568)追问：SFT和GRPO是分两阶段的吗？",
+        "[MiniMax - 大模型算法岗（后训练 / SFT / RL 方向，独角兽）](https://www.nowcoder.com/discuss/925527528259743744)追问：SFT 的作用是什么？为什么通常先做 SFT 再做强化学习？",
+        "[MiniMax - 大模型算法岗（后训练 / SFT / RL）](https://www.nowcoder.com/discuss/926272883872075776)追问：SFT 的作用及为何先 SFT 后 RL？",
+        "唯品会/NLP算法实习一面 [1/2]",
+        "唯品会/NLP算法实习一面 [2/2]",
+        "[9.18号合合信息多模态大模型算法研究员-一面](https://www.nowcoder.com/discuss/933406132259868672)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "LoRA 应该挂在哪些层？rank、alpha 和 dropout 如何共同影响效果？",
+      "frequency": 6,
+      "firstSeenOrder": 58,
+      "evidence": [
+        "Shopee 大模型一面",
+        "[阶跃星辰（Stepfun）- 大模型算法岗（Post-train）](https://www.nowcoder.com/discuss/926273007276814336)追问：LoRA 的 rank 值越大越好吗？为什么？",
+        "[本轮追问](https://www.nowcoder.com/discuss/926468630819213312)",
+        "[本轮追问](https://www.nowcoder.com/discuss/926677767104532480)",
+        "[pdd 9.19 线下面试](https://www.nowcoder.com/feed/main/detail/7c13db0617cd41f49ed495cebfe04482)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "预训练与 SFT 在数据、目标函数、计算形态和基础设施上有什么区别？",
+      "frequency": 6,
+      "firstSeenOrder": 67,
+      "evidence": [
+        "AI Infra 小厂实习面经",
+        "本轮追问：BERT 的预训练任务和下游任务通常分别使用什么 loss？（）；本轮追问：后训练数据形态是怎样的？（）",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)",
+        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)",
+        "[阿里云 Agent开发 一二面](https://www.nowcoder.com/feed/main/detail/fee780e1140147fbbad0f23a74e265c6)"
       ]
     },
     {
@@ -6472,19 +6597,6 @@
     },
     {
       "dimension": "10-training-and-data",
-      "title": "LoRA 应该挂在哪些层？rank、alpha 和 dropout 如何共同影响效果？",
-      "frequency": 5,
-      "firstSeenOrder": 58,
-      "evidence": [
-        "Shopee 大模型一面",
-        "[阶跃星辰（Stepfun）- 大模型算法岗（Post-train）](https://www.nowcoder.com/discuss/926273007276814336)追问：LoRA 的 rank 值越大越好吗？为什么？",
-        "[本轮追问](https://www.nowcoder.com/discuss/926468630819213312)",
-        "[本轮追问](https://www.nowcoder.com/discuss/926677767104532480)",
-        "[pdd 9.19 线下面试](https://www.nowcoder.com/feed/main/detail/7c13db0617cd41f49ed495cebfe04482)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
       "title": "Agentic RL 与普通 LLM RL 的核心差异是什么？",
       "frequency": 5,
       "firstSeenOrder": 61,
@@ -6494,19 +6606,6 @@
         "[字节跳动 - 大模型算法岗（强化学习方向）](https://www.nowcoder.com/discuss/925523582761857024)追问：智能体强化学习（Agentic RL）与传统 RL 在训练范式和信用分配上的核心差异是什么？",
         "[腾讯（CSIG）- 大模型算法岗（RLHF 与多模态）](https://www.nowcoder.com/discuss/925526785003909120)追问：智能体强化学习（Agentic RL）与传统 RL 在训练范式和信用分配上的核心差异是什么？",
         "[字节跳动 - 大模型算法岗（RL/后训练方向）](https://www.nowcoder.com/discuss/926272098744438784)追问：智能体强化学习（Agentic RL）与传统 RL 在训练范式和信用分配上的核心差异？"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "预训练与 SFT 在数据、目标函数、计算形态和基础设施上有什么区别？",
-      "frequency": 5,
-      "firstSeenOrder": 67,
-      "evidence": [
-        "AI Infra 小厂实习面经",
-        "本轮追问：BERT 的预训练任务和下游任务通常分别使用什么 loss？（）；本轮追问：后训练数据形态是怎样的？（）",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)",
-        "[9.22 阿里千问二面](https://www.nowcoder.com/feed/main/detail/5ff7b7fde8bc49eb960d5badde3ac623)"
       ]
     },
     {
@@ -6569,6 +6668,30 @@
         "本轮追问：按照Agentic RL的数据采集逻辑会有什么问题，怎么解决？（）",
         "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
         "[阿里千问C端一面凉经-7.2](https://www.nowcoder.com/discuss/932006434923958272)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "SFT 训练数据如何获取、构造与清洗？",
+      "frequency": 4,
+      "firstSeenOrder": 149,
+      "evidence": [
+        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
+        "[淘天集团 Agent算法 一面](https://www.nowcoder.com/discuss/931957859154132992)",
+        "[美团 正式批 二面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/e8d80550c54142998826415f0de258a0)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "Transformer 自注意力机制的原理、计算过程与作用是什么？",
+      "frequency": 4,
+      "firstSeenOrder": 153,
+      "evidence": [
+        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
+        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)"
       ]
     },
     {
@@ -6681,22 +6804,12 @@
     },
     {
       "dimension": "10-training-and-data",
-      "title": "SFT 训练数据如何获取、构造与清洗？",
+      "title": "为什么选择 AC 自动机、TextCNN、FastText 和 TinyBERT，而不是更深的模型？",
       "frequency": 2,
-      "firstSeenOrder": 149,
+      "firstSeenOrder": 111,
       "evidence": [
-        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
-        "[淘天集团 Agent算法 一面](https://www.nowcoder.com/discuss/931957859154132992)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "Transformer 自注意力机制的原理、计算过程与作用是什么？",
-      "frequency": 2,
-      "firstSeenOrder": 153,
-      "evidence": [
-        "[滴滴一些面经合集（算法）](https://www.nowcoder.com/feed/main/detail/37cae17c5f2a49ee81375721f53bbf9b)",
-        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)"
+        "[本轮面经（文章 77）](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)",
+        "[快商通一面凉经 丨 大模型Agent全栈](https://www.nowcoder.com/feed/main/detail/36f96f0e0ff249e2b8025cbe9b19927d)"
       ]
     },
     {
@@ -6717,6 +6830,26 @@
       "evidence": [
         "[乐言科技一面](https://www.nowcoder.com/feed/main/detail/70faa87a0e1046a68c864a2a7c4c6789)",
         "[上海代码一行科技公司 - 9月10日- 一面-秋招](https://www.nowcoder.com/discuss/929791548588294144)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "Prompt Engineering 与模型微调如何结合以提升模型能力？",
+      "frequency": 2,
+      "firstSeenOrder": 174,
+      "evidence": [
+        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "10-training-and-data",
+      "title": "大模型架构近年来有哪些主要演进方向？各类结构变化解决了什么问题？",
+      "frequency": 2,
+      "firstSeenOrder": 175,
+      "evidence": [
+        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
       ]
     },
     {
@@ -6835,15 +6968,6 @@
       "firstSeenOrder": 109,
       "evidence": [
         "[本轮面经（文章 40）](https://www.nowcoder.com/feed/main/detail/ac25d49b0692473c8f65654adda82b9b)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "为什么选择 AC 自动机、TextCNN、FastText 和 TinyBERT，而不是更深的模型？",
-      "frequency": 1,
-      "firstSeenOrder": 111,
-      "evidence": [
-        "[本轮面经（文章 77）](https://www.nowcoder.com/feed/main/detail/19d5ea0eda0e40de8a060ac516703c58)"
       ]
     },
     {
@@ -7056,10 +7180,11 @@
     {
       "dimension": "10-training-and-data",
       "title": "OCR 系统的主要技术难点有哪些？如何分别解决？",
-      "frequency": 1,
+      "frequency": 2,
       "firstSeenOrder": 161,
       "evidence": [
-        "[9.14日美团多模态生成大模型二面](https://www.nowcoder.com/discuss/930520072370606080)"
+        "[9.14日美团多模态生成大模型二面](https://www.nowcoder.com/discuss/930520072370606080)",
+        "[9.18号合合信息多模态大模型算法研究员-一面](https://www.nowcoder.com/discuss/933406132259868672)"
       ]
     },
     {
@@ -7141,24 +7266,6 @@
       "firstSeenOrder": 173,
       "evidence": [
         "[敦煌网推荐算法](https://www.nowcoder.com/feed/main/detail/915613d6a3274e87b815a85ca8002a45)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "Prompt Engineering 与模型微调如何结合以提升模型能力？",
-      "frequency": 1,
-      "firstSeenOrder": 174,
-      "evidence": [
-        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)"
-      ]
-    },
-    {
-      "dimension": "10-training-and-data",
-      "title": "大模型架构近年来有哪些主要演进方向？各类结构变化解决了什么问题？",
-      "frequency": 1,
-      "firstSeenOrder": 175,
-      "evidence": [
-        "[字节多模态大模型面经一面](https://www.nowcoder.com/discuss/932594519835443200)"
       ]
     },
     {
@@ -7402,7 +7509,7 @@
     {
       "dimension": "11-ai-code-testing",
       "title": "如何测试 AI 生成代码的正确性？",
-      "frequency": 17,
+      "frequency": 19,
       "firstSeenOrder": 4,
       "evidence": [
         "蚂蚁一面",
@@ -7421,7 +7528,9 @@
         "[4399-agent开发面经](https://www.nowcoder.com/feed/main/detail/b040e00a505344deac8f0d2b4968b171)",
         "[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)",
         "[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)",
-        "[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)"
+        "[9.15快手二面AI应用](https://www.nowcoder.com/feed/main/detail/5356d768dc7a4c62a989ee425bef7b12)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)",
+        "[美团ai全栈二面](https://www.nowcoder.com/feed/main/detail/064725eb6da14cda9efabb2a51a68681)"
       ]
     },
     {
@@ -7435,8 +7544,22 @@
     },
     {
       "dimension": "11-ai-code-testing",
-      "title": "如何用 Agent 自动化测试一个现有软件项目，并划分规划、执行、Oracle 与人工门禁？",
+      "title": "AI 生成代码在哪些场景更具落地价值？应用边界在哪？",
       "frequency": 6,
+      "firstSeenOrder": 7,
+      "evidence": [
+        "蚂蚁Agent一二面（Code Agent方向）",
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)",
+        "[9.14字节推荐架构一面](https://www.nowcoder.com/feed/main/detail/467d01beed8a40b89ac414b90fc7fb85)",
+        "[9.20 汇川技术 数字化全栈工程师 一面](https://www.nowcoder.com/feed/main/detail/28032c48a90c4f69827704deb3fae34c)",
+        "[携程AI应用开发实习一面（OC）](https://www.nowcoder.com/discuss/933058120102739968)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)"
+      ]
+    },
+    {
+      "dimension": "11-ai-code-testing",
+      "title": "如何用 Agent 自动化测试一个现有软件项目，并划分规划、执行、Oracle 与人工门禁？",
+      "frequency": 7,
       "firstSeenOrder": 13,
       "evidence": [
         "蚂蚁集团效能研发面经",
@@ -7444,32 +7567,21 @@
         "[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果完全自动化地交给Agent不太放心，如何解决？",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/31bdec3009dd4557936291038fae6bc0)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)",
-        "[本轮来源](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)"
-      ]
-    },
-    {
-      "dimension": "11-ai-code-testing",
-      "title": "AI 生成代码在哪些场景更具落地价值？应用边界在哪？",
-      "frequency": 5,
-      "firstSeenOrder": 7,
-      "evidence": [
-        "蚂蚁Agent一二面（Code Agent方向）",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c639e7ea920b49b1834839f2a090809e)",
-        "[9.14字节推荐架构一面](https://www.nowcoder.com/feed/main/detail/467d01beed8a40b89ac414b90fc7fb85)",
-        "[9.20 汇川技术 数字化全栈工程师 一面](https://www.nowcoder.com/feed/main/detail/28032c48a90c4f69827704deb3fae34c)",
-        "[携程AI应用开发实习一面（OC）](https://www.nowcoder.com/discuss/933058120102739968)"
+        "[本轮来源](https://www.nowcoder.com/feed/main/detail/c478feeef29340caac7b8c44d5a6c5e4)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
       "dimension": "11-ai-code-testing",
       "title": "工程级 Code Agent 处理项目上下文、生成代码时有哪些核心挑战？",
-      "frequency": 4,
+      "frequency": 5,
       "firstSeenOrder": 6,
       "evidence": [
         "蚂蚁Agent一二面（Code Agent方向）",
         "[字节 AI 应用开发二面](https://www.nowcoder.com/feed/main/detail/7e8a821479a649fd914e449d312eeb95)",
         "[拼多多 - Agent 开发岗（工程化 + 数据库）](https://www.nowcoder.com/discuss/926273867092430848)追问：代码生成全链路及超长上下文处理？",
-        "[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)"
+        "[9.14小红书 PE（产品工程师/全栈方向--实习）二面 (流程泡到9.21挂)](https://www.nowcoder.com/discuss/929891805049421824)",
+        "[度小满 - AI 全栈研发 - 二面](https://www.nowcoder.com/feed/main/detail/0bed1f22b62145f480d2c10c5ffd7951)"
       ]
     },
     {
@@ -7640,14 +7752,17 @@
     {
       "dimension": "12-business-ai-engineering",
       "title": "业务方反馈“AI 效果差”，你怎么系统性定位问题？",
-      "frequency": 5,
+      "frequency": 8,
       "firstSeenOrder": 4,
       "evidence": [
         "网易 AI Agent 开发实习",
         "[viture agent平台开发 一面](https://www.nowcoder.com/feed/main/detail/c4c614b12d564af3b37c30c241072973)追问：如果AI Agent效果没有达到预期、在某些指标上落后，你们怎么优化？",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)",
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)",
-        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)"
+        "[本轮追问](https://www.nowcoder.com/feed/main/detail/c366afaed5b84de2b05d70bc6f2b81f2)",
+        "[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
       ]
     },
     {
@@ -7943,7 +8058,7 @@
     {
       "dimension": "13-project-deep-dive",
       "title": "你的 Agent 项目用了什么框架？为什么选它？",
-      "frequency": 16,
+      "frequency": 17,
       "firstSeenOrder": 2,
       "evidence": [
         "淘宝闪购一面",
@@ -7961,7 +8076,8 @@
         "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)",
         "[腾讯一面面经](https://www.nowcoder.com/feed/main/detail/668c7f4007b44fc7b878f55eb01e6e11)",
         "[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)",
-        "社招"
+        "社招",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -7978,7 +8094,7 @@
     {
       "dimension": "13-project-deep-dive",
       "title": "意图识别模块具体怎么做的？",
-      "frequency": 16,
+      "frequency": 21,
       "firstSeenOrder": 3,
       "evidence": [
         "淘宝闪购一面",
@@ -7996,7 +8112,12 @@
         "[腾讯三面面经](https://www.nowcoder.com/feed/main/detail/431b4ca35c7f43909219d31aebba5b56)",
         "[腾讯二面面经](https://www.nowcoder.com/feed/main/detail/12b18eae310d4b7eadd896aef7f4a712)",
         "[理想智能体应用开发一面](https://www.nowcoder.com/feed/main/detail/5857f695ca2c4edda99e2befd20afafd)",
-        "社招"
+        "社招",
+        "[深至科技一面丨全栈开发实习（医疗AI）](https://www.nowcoder.com/feed/main/detail/4dc705fe3d284276a68a86a59b1acb4f)",
+        "[快商通一面凉经 丨 大模型Agent全栈](https://www.nowcoder.com/feed/main/detail/36f96f0e0ff249e2b8025cbe9b19927d)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -8043,7 +8164,7 @@
     {
       "dimension": "13-project-deep-dive",
       "title": "知识库是怎么构建的？",
-      "frequency": 12,
+      "frequency": 13,
       "firstSeenOrder": 7,
       "evidence": [
         "淘宝闪购一面",
@@ -8057,7 +8178,8 @@
         "[本轮来源](https://www.nowcoder.com/feed/main/detail/f9e65706c3274fac86b52f27a70bf902)",
         "[8.25 小红书实习 AI全栈开发实习一面挂凉经](https://www.nowcoder.com/feed/main/detail/c712eda7fbf44ba69835b6dd2ff7fc4c)",
         "[9.18 虾皮shopee chatbot研发实习一面凉经](https://www.nowcoder.com/feed/main/detail/9f02a7f8009d4aca9fc730a18b9f96cc)",
-        "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)"
+        "[字节Agent开发后端 日常实习一面凉面](https://www.nowcoder.com/discuss/932295617999622144)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -8079,23 +8201,25 @@
     {
       "dimension": "13-project-deep-dive",
       "title": "构建知识库时如何解析上传的表格或图片文件？",
-      "frequency": 4,
+      "frequency": 5,
       "firstSeenOrder": 31,
       "evidence": [
         "淘宝闪购 AI应用研发 一面",
         "[蔚来——大模型算法岗（智能座舱/自动驾驶）实习一面](https://www.nowcoder.com/discuss/930755708008558592)",
         "追问：文档里面存在表格、图片，如何处理？",
-        "[虾皮Agent一面](https://www.nowcoder.com/feed/main/detail/409dc8793a7b450eb51ee32c2b923d49)"
+        "[虾皮Agent一面](https://www.nowcoder.com/feed/main/detail/409dc8793a7b450eb51ee32c2b923d49)",
+        "[经纬恒润ai应用开发一面面经](https://www.nowcoder.com/feed/main/detail/32d60ac358504e86aab2d634a15b996b)"
       ]
     },
     {
       "dimension": "13-project-deep-dive",
       "title": "知识检索时如何提升模型回答正确率？",
-      "frequency": 2,
+      "frequency": 3,
       "firstSeenOrder": 9,
       "evidence": [
         "淘宝闪购一面",
-        "淘宝闪购 AI应用研发 一面"
+        "淘宝闪购 AI应用研发 一面",
+        "[度小满 - AI 全栈研发 - 三面](https://www.nowcoder.com/feed/main/detail/e98c29d76e854e2bbd1b40731d6ce715)"
       ]
     },
     {
@@ -8285,7 +8409,7 @@
     {
       "dimension": "15-agent-concepts",
       "title": "Harness Engineering 是什么？如果让你构建一个 Harness 体系，你会做哪些工作？",
-      "frequency": 20,
+      "frequency": 21,
       "firstSeenOrder": 1,
       "evidence": [
         "快手AI业务应用设计开发",
@@ -8307,7 +8431,8 @@
         "社招五年Go面经同题：“了解harness engineer吗”",
         "腾讯音乐暑期+日常同题：“有了解过Harness么？有用过Harness么？”",
         "[(秋招) vivo线下面面经 - Agent开发](https://www.nowcoder.com/discuss/932016298563809280)",
-        "[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)"
+        "[度小满 AI 全栈二面](https://www.nowcoder.com/discuss/931952631340077056)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
       ]
     },
     {
@@ -8381,7 +8506,7 @@
     {
       "dimension": "15-agent-concepts",
       "title": "MCP 是什么？它解决了 Function Calling 的什么根本问题？",
-      "frequency": 14,
+      "frequency": 16,
       "firstSeenOrder": 8,
       "evidence": [
         "蚂蚁智能体与大模型应用二面",
@@ -8397,7 +8522,9 @@
         "[9.18 虾皮shopee chatbot研发实习一面凉经](https://www.nowcoder.com/feed/main/detail/9f02a7f8009d4aca9fc730a18b9f96cc)",
         "蚂蚁Agent开发一面追问：“有了FC是否可以没有MCP”",
         "高德实习一面同题：“MCP协议的完整调用过程”",
-        "字节实习Agent开发一面追问：“MCP和Function Calling的关系”"
+        "字节实习Agent开发一面追问：“MCP和Function Calling的关系”",
+        "[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)",
+        "[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)"
       ]
     },
     {
@@ -8445,7 +8572,7 @@
     {
       "dimension": "15-agent-concepts",
       "title": "Hermes、OpenCode、Claude Code、OpenClaw 等热门 Coding Agent 工具的核心差异和适用场景？",
-      "frequency": 9,
+      "frequency": 10,
       "firstSeenOrder": 13,
       "evidence": [
         "哆咔互娱Agent开发实习一面",
@@ -8456,7 +8583,8 @@
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/439125efe93b460baea2f71a5d454650)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/bfd43b5c66784add8fbf5893c164697a)",
         "[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)",
-        "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)"
+        "[药明康德（AI数据方向-二面）](https://www.nowcoder.com/feed/main/detail/365904cd189149ffb52c36286ab23b37)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
       ]
     },
     {
@@ -8469,6 +8597,18 @@
         "[杭州和为机电 AI 应用工程师面试](https://www.nowcoder.com/discuss/923620045412933632)",
         "百度大模型研发工程师二面（2026-08-21） / ；本轮追问：通用办公类的Agent你接触过吗？（）",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)"
+      ]
+    },
+    {
+      "dimension": "15-agent-concepts",
+      "title": "知识库与 Skills 如何分工承载业务知识？",
+      "frequency": 4,
+      "firstSeenOrder": 29,
+      "evidence": [
+        "[9.21 蚂蚁二面](https://www.nowcoder.com/feed/main/detail/52b419448b854e24bbdf41ca9e6ffe06)",
+        "本轮追问：AI pipeline 对业务知识的理解如何保证准确？（）",
+        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)",
+        "[度小满 - AI 全栈研发 - 一面](https://www.nowcoder.com/feed/main/detail/f9c29fa841664294b8ab7e9921072afd)"
       ]
     },
     {
@@ -8495,23 +8635,22 @@
     },
     {
       "dimension": "15-agent-concepts",
-      "title": "知识库与 Skills 如何分工承载业务知识？",
-      "frequency": 3,
-      "firstSeenOrder": 29,
-      "evidence": [
-        "[9.21 蚂蚁二面](https://www.nowcoder.com/feed/main/detail/52b419448b854e24bbdf41ca9e6ffe06)",
-        "本轮追问：AI pipeline 对业务知识的理解如何保证准确？（）",
-        "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)"
-      ]
-    },
-    {
-      "dimension": "15-agent-concepts",
       "title": "Dify/Coze 这种低代码工作流平台和 Codex/Claude Code 这类 Coding Agent 的本质区别是什么？",
       "frequency": 2,
       "firstSeenOrder": 14,
       "evidence": [
         "成都某中厂Agent产品开发实习面经",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/bfd43b5c66784add8fbf5893c164697a)"
+      ]
+    },
+    {
+      "dimension": "15-agent-concepts",
+      "title": "使用 LangChain 构建 Agent 时有哪些核心模块？各模块如何协作？",
+      "frequency": 2,
+      "firstSeenOrder": 26,
+      "evidence": [
+        "[字节跳动 AI Agent研发工程师｜AI算力基础设施 27秋招面经](https://www.nowcoder.com/discuss/930155293864914944)",
+        "[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)"
       ]
     },
     {
@@ -8544,15 +8683,6 @@
     },
     {
       "dimension": "15-agent-concepts",
-      "title": "使用 LangChain 构建 Agent 时有哪些核心模块？各模块如何协作？",
-      "frequency": 1,
-      "firstSeenOrder": 26,
-      "evidence": [
-        "[字节跳动 AI Agent研发工程师｜AI算力基础设施 27秋招面经](https://www.nowcoder.com/discuss/930155293864914944)"
-      ]
-    },
-    {
-      "dimension": "15-agent-concepts",
       "title": "Computer Use Agent 如何感知并操作本地电脑？",
       "frequency": 1,
       "firstSeenOrder": 27,
@@ -8572,7 +8702,7 @@
     {
       "dimension": "16-agent-infra",
       "title": "一次 Agent 请求的完整执行链路是什么？",
-      "frequency": 15,
+      "frequency": 16,
       "firstSeenOrder": 2,
       "evidence": [
         "字节火山引擎 Managed Agent 一面同题",
@@ -8589,7 +8719,8 @@
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/ed25d2f60ddc4436b0139a7c52e62a61)",
         "[本轮追问](https://www.nowcoder.com/feed/main/detail/fbd28b541e1b4f498a58e84efb7314cf)",
         "[淘天AI应用开发二面](https://www.nowcoder.com/feed/main/detail/d5d1f688dae5496abbce783aa28d6731)",
-        "[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)"
+        "[阿里云一面](https://www.nowcoder.com/feed/main/detail/ceade00d742046d0bef6bee7fe7a7aad)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
       ]
     },
     {
@@ -8713,6 +8844,19 @@
     },
     {
       "dimension": "16-agent-infra",
+      "title": "大量本地端 Agent 与云端 Agent 如何协同？身份、状态、离线和任务迁移边界怎么设计？",
+      "frequency": 5,
+      "firstSeenOrder": 23,
+      "evidence": [
+        "[小红书 Agent 开发二面](https://www.nowcoder.com/feed/main/detail/9f7361c709f4413396988b4f334a0d6f)",
+        "[互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)",
+        "本轮追问：当前 Agent 在本地运行，如果迁移到云端或服务器，整体架构应该如何设计？可以分成哪些层？还需要补充什么？（）",
+        "[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)",
+        "[小鹏二面](https://www.nowcoder.com/feed/main/detail/7c2fa3dd92014d038603ba388fb078f4)"
+      ]
+    },
+    {
+      "dimension": "16-agent-infra",
       "title": "Agentic RL 的 Rollout、Training 与推理引擎如何编排？",
       "frequency": 4,
       "firstSeenOrder": 13,
@@ -8737,18 +8881,6 @@
     },
     {
       "dimension": "16-agent-infra",
-      "title": "大量本地端 Agent 与云端 Agent 如何协同？身份、状态、离线和任务迁移边界怎么设计？",
-      "frequency": 4,
-      "firstSeenOrder": 23,
-      "evidence": [
-        "[小红书 Agent 开发二面](https://www.nowcoder.com/feed/main/detail/9f7361c709f4413396988b4f334a0d6f)",
-        "[互联网金融 Agent 开发三面](https://www.nowcoder.com/feed/main/detail/88c55ee65af04ac98c218b9d17c47a71)",
-        "本轮追问：当前 Agent 在本地运行，如果迁移到云端或服务器，整体架构应该如何设计？可以分成哪些层？还需要补充什么？（）",
-        "[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)"
-      ]
-    },
-    {
-      "dimension": "16-agent-infra",
       "title": "Agent 平台或 Runtime 出现新框架时，如何评估迁移收益、兼容老旧服务并决定是否淘汰旧方案？",
       "frequency": 4,
       "firstSeenOrder": 24,
@@ -8761,6 +8893,18 @@
     },
     {
       "dimension": "16-agent-infra",
+      "title": "如何让 Agent 执行过程可观测、可调试？",
+      "frequency": 4,
+      "firstSeenOrder": 33,
+      "evidence": [
+        "[9.7 百度 agent开发日常实习面经](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)",
+        "本轮追问：如何利用可观测链路定位首 Token 延迟、工具调用错误等问题？（）",
+        "[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)",
+        "[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)"
+      ]
+    },
+    {
+      "dimension": "16-agent-infra",
       "title": "Agent 如何实现主动向用户推送消息？",
       "frequency": 3,
       "firstSeenOrder": 29,
@@ -8768,17 +8912,6 @@
         "[9.8 小厂 agent开发实习 面经](https://www.nowcoder.com/feed/main/detail/2f4e4cde4e524a16aae5f55a89c49273)",
         "本轮追问：医院里大家排队买药取药，屏幕上轮播患者名字；现在要设计一个 PC 页面实现类似的轮播通知，每个用户看到自己的轮播信息，用户之间的信息相互隔离。后端通过实时数仓的 MQ 接收每秒推送的消息，后端消费后发送给前端，前端轮播展示最近 20 条。这个功能你会如何设计和实现？（）",
         "[(秋招) 9.16 字节中交广 - 交易与广告业务 - AI全栈开发工程师](https://www.nowcoder.com/discuss/932587389027962880)"
-      ]
-    },
-    {
-      "dimension": "16-agent-infra",
-      "title": "如何让 Agent 执行过程可观测、可调试？",
-      "frequency": 3,
-      "firstSeenOrder": 33,
-      "evidence": [
-        "[9.7 百度 agent开发日常实习面经](https://www.nowcoder.com/feed/main/detail/bb8c28105f364770b57ff5eb5649cc60)",
-        "本轮追问：如何利用可观测链路定位首 Token 延迟、工具调用错误等问题？（）",
-        "[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)"
       ]
     },
     {
@@ -9362,6 +9495,16 @@
     },
     {
       "dimension": "17-ai-infra",
+      "title": "DeepSpeed ZeRO 的三个阶段分别做什么？",
+      "frequency": 2,
+      "firstSeenOrder": 34,
+      "evidence": [
+        "[本轮面经（文章 185）](https://www.nowcoder.com/discuss/926467109717118976)",
+        "[美团 正式批 一面 自动驾驶算法工程师](https://www.nowcoder.com/feed/main/detail/4065102c270e40758437b32297f58836)"
+      ]
+    },
+    {
+      "dimension": "17-ai-infra",
       "title": "KV Cache 命中率如何评估与优化？",
       "frequency": 2,
       "firstSeenOrder": 47,
@@ -9413,15 +9556,6 @@
       "firstSeenOrder": 33,
       "evidence": [
         "[本轮面经（文章 11）](https://www.nowcoder.com/feed/main/detail/64868531af8d424b8aa55f46e313b478)"
-      ]
-    },
-    {
-      "dimension": "17-ai-infra",
-      "title": "DeepSpeed ZeRO 的三个阶段分别做什么？",
-      "frequency": 1,
-      "firstSeenOrder": 34,
-      "evidence": [
-        "[本轮面经（文章 185）](https://www.nowcoder.com/discuss/926467109717118976)"
       ]
     },
     {

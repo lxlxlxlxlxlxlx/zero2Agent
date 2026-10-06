@@ -122,3 +122,22 @@ The answers added from the 2026-09-22 through 2026-09-29 interview audit were in
 - [LLaMA](https://ai.meta.com/research/publications/llama-open-and-efficient-foundation-language-models/), [Llama 2](https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/), and [Llama 3](https://ai.meta.com/research/publications/the-llama-3-herd-of-models) — architecture, training-data, post-training, tokenizer, context, tool-use, and release evolution across the three generations.
 
 No upstream prose, code, datasets, diagrams, or benchmark results are reproduced. Version-specific behavior remains tied to the linked documentation; the surrounding explanations, comparisons, and engineering recommendations are independent analysis.
+
+## Interview Answer References (2026-10-07)
+
+The incremental answers from the September 23 through October 7 interview review were independently written using these primary references:
+
+- [ToT 论文](https://arxiv.org/abs/2305.10601)
+- [MCP 架构文档](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture)
+- [GQA 论文](https://arxiv.org/abs/2305.13245)
+- [Transformer 原论文](https://arxiv.org/html/1706.03762v7)
+- [LoRA 原论文](https://arxiv.org/html/2106.09685v2)
+- [InstructGPT 论文](https://arxiv.org/abs/2203.02155)
+- [LangChain](https://docs.langchain.com/oss/python/langchain/overview)
+- [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
+- [TrOCR](https://arxiv.org/abs/2109.10282)
+- [DPO](https://arxiv.org/abs/2305.18290)
+- [Dr. GRPO](https://arxiv.org/abs/2503.20783)
+
+
+No upstream prose, code, figures, or datasets are reproduced. Protocol and implementation facts are attributed at the relevant answer; architecture, evaluation, and operational recommendations are independent engineering analysis. Public interview links document question provenance only.

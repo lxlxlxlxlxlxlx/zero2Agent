@@ -283,7 +283,7 @@ MCP 接多工具后，同一个“代码质量评测”请求，SonarQube 返回
 
 ### Q：大模型的 Function Call 是什么？Tool Use 一般怎么用？
 
-> 来源：蚂蚁集团智能体与大模型应用一面 【字节实习Agent开发一面追问：工具注册/解析/调用/回传全链路】【小红书 Agent 岗一面追问：`tool_use` 捕获、执行与非标准命令请求】；[BIGO 音频算法工程师一面](https://www.nowcoder.com/discuss/924359576990781440)；[百度 Agent 一面](https://www.nowcoder.com/feed/main/detail/53542e2dcfd44b1d84b0ae55b4fc1b35)【[启云方AI Agent一面凉经](https://www.nowcoder.com/feed/main/detail/fea2d18bd59a421da7d16fe16223d38c)追问：“语言调用工具”中的“语言”和真正的 tool call / function call 到底是什么关系？】；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；本轮追问：模型这种结构化输出、工具调用的能力叫什么？（[斑头雁（Agent实习生面试一面）](https://www.nowcoder.com/discuss/930139676764102656)）；[字节跳动Agent开发1面凉经](https://www.nowcoder.com/discuss/929406267141914624)；本轮追问：完整的工具调用链路是怎样的？模型生成工具调用 JSON 之后代码层做什么？（[千问AI研发一面凉经](https://www.nowcoder.com/feed/main/detail/ebf0ec03e5ee4fa8a140cc8d247b1e20)）；本轮追问：Skill 怎么让大模型知道什么时候用、怎么用？（[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)）；[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)；[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)
+> 来源：蚂蚁集团智能体与大模型应用一面 【字节实习Agent开发一面追问：工具注册/解析/调用/回传全链路】【小红书 Agent 岗一面追问：`tool_use` 捕获、执行与非标准命令请求】；[BIGO 音频算法工程师一面](https://www.nowcoder.com/discuss/924359576990781440)；[百度 Agent 一面](https://www.nowcoder.com/feed/main/detail/53542e2dcfd44b1d84b0ae55b4fc1b35)【[启云方AI Agent一面凉经](https://www.nowcoder.com/feed/main/detail/fea2d18bd59a421da7d16fe16223d38c)追问：“语言调用工具”中的“语言”和真正的 tool call / function call 到底是什么关系？】；[本轮来源](https://www.nowcoder.com/feed/main/detail/89e9597f580840f5a6e9f740cc6b0b97)；本轮追问：模型这种结构化输出、工具调用的能力叫什么？（[斑头雁（Agent实习生面试一面）](https://www.nowcoder.com/discuss/930139676764102656)）；[字节跳动Agent开发1面凉经](https://www.nowcoder.com/discuss/929406267141914624)；本轮追问：完整的工具调用链路是怎样的？模型生成工具调用 JSON 之后代码层做什么？（[千问AI研发一面凉经](https://www.nowcoder.com/feed/main/detail/ebf0ec03e5ee4fa8a140cc8d247b1e20)）；本轮追问：Skill 怎么让大模型知道什么时候用、怎么用？（[度小满一面](https://www.nowcoder.com/feed/main/detail/41baab8c631647568203ebfaf3898574)）；[字节剪映AI应用开发一面](https://www.nowcoder.com/feed/main/detail/7211e82c75284d23a89b569cd9dc289d)；[27秋招-恒生电子AI面试-AI应用开发岗-26.9.23](https://www.nowcoder.com/feed/main/detail/e7981675c7a44b098d97e90a854f9c3c)；[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)
 
 **新手答**：“就是让模型调用函数。”
 
@@ -399,7 +399,7 @@ System Prompt:
 
 ### Q：MCP 和 Skills 的本质区别是什么？都是工具调用，为什么需要两套机制？
 
-> 来源：蚂蚁集团智能体与大模型应用二面 【蚂蚁AI应用开发二面同题：Skill 与 MCP 核心差异】【[钉钉二面](https://www.nowcoder.com/discuss/925181638412091392)追问：MCP 跟 Skill 有什么区别？】【[字节跳动 - AI Agent 开发岗（工程方向）](https://www.nowcoder.com/discuss/926273296180547584)追问：MCP 与 Skill 的核心区别是什么？迁移的原因是什么？】【[美团 - Agent 开发岗（场景设计方向）](https://www.nowcoder.com/discuss/926273749555376128)追问：MCP vs Skill 选型场景？】【[pdd agent 一面](https://www.nowcoder.com/feed/main/detail/ee971b755cbd475a91ef62cee38cdac8)追问：MCP是什么，为什么项目没有选用MCP而选择自己封装？Skill与MCP的核心区别是什么？】；[上海联蔚数科agent面经](https://www.nowcoder.com/feed/main/detail/97ee6dec31b14d12a1f800b709e21a4c)；本轮追问：Agent、MCP 和 Skill 的区别是什么？（[绿盟科技一晚速通三面已offer](https://www.nowcoder.com/feed/main/detail/39776141d05c462aa212a9adc229052d)）；本轮追问：为什么 Agent 生态开始广泛使用 MCP？（[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)）
+> 来源：蚂蚁集团智能体与大模型应用二面 【蚂蚁AI应用开发二面同题：Skill 与 MCP 核心差异】【[钉钉二面](https://www.nowcoder.com/discuss/925181638412091392)追问：MCP 跟 Skill 有什么区别？】【[字节跳动 - AI Agent 开发岗（工程方向）](https://www.nowcoder.com/discuss/926273296180547584)追问：MCP 与 Skill 的核心区别是什么？迁移的原因是什么？】【[美团 - Agent 开发岗（场景设计方向）](https://www.nowcoder.com/discuss/926273749555376128)追问：MCP vs Skill 选型场景？】【[pdd agent 一面](https://www.nowcoder.com/feed/main/detail/ee971b755cbd475a91ef62cee38cdac8)追问：MCP是什么，为什么项目没有选用MCP而选择自己封装？Skill与MCP的核心区别是什么？】；[上海联蔚数科agent面经](https://www.nowcoder.com/feed/main/detail/97ee6dec31b14d12a1f800b709e21a4c)；本轮追问：Agent、MCP 和 Skill 的区别是什么？（[绿盟科技一晚速通三面已offer](https://www.nowcoder.com/feed/main/detail/39776141d05c462aa212a9adc229052d)）；本轮追问：为什么 Agent 生态开始广泛使用 MCP？（[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)）；[腾讯 260824 一面面经](https://www.nowcoder.com/feed/main/detail/bf38563e18af48269c0e710993d3f06e)
 
 **新手答**：“MCP 是协议，Skills 是能力，不太一样。”
 
@@ -466,7 +466,7 @@ Agent 是运行时的智能体或编排层，负责理解目标、维护上下�
 
 ### Q：MCP Server 是怎么构建的？
 
-> 来源：字节 Agent 实习二面；[OPPO IT 开发一面](https://www.nowcoder.com/discuss/923561467092160512)【[钉钉二面](https://www.nowcoder.com/discuss/925181638412091392)追问：自己有去搭建过 MCP Server 吗？】；[本轮来源](https://www.nowcoder.com/feed/main/detail/ac25d49b0692473c8f65654adda82b9b)；[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)
+> 来源：字节 Agent 实习二面；[OPPO IT 开发一面](https://www.nowcoder.com/discuss/923561467092160512)【[钉钉二面](https://www.nowcoder.com/discuss/925181638412091392)追问：自己有去搭建过 MCP Server 吗？】；[本轮来源](https://www.nowcoder.com/feed/main/detail/ac25d49b0692473c8f65654adda82b9b)；[迅雷 Agent一面](https://www.nowcoder.com/discuss/932392798559432704)；[9.24 普通の快手一面（发券）](https://www.nowcoder.com/feed/main/detail/02dac811205448be9c3b0f146dd68f8b)
 
 **新手答**：“就是写个 API 接口。”
 
@@ -502,13 +502,15 @@ MCP（Model Context Protocol）是 Anthropic 提出的**模型与外部工具/�
 - 普通 API：每个工具一套接口定义、一套调用方式、一套错误处理
 - MCP：所有工具统一协议，Agent 不需要知道底层是 REST 还是 gRPC 还是本地调用——只需要知道 tool name 和参数
 
+**追问补充**：当多个宿主需要复用同一能力、动态发现工具且维护多套适配成本较高时，可考虑封装 MCP Server；单应用的稳定内部调用也可直接使用函数、SDK 或 API。[MCP 架构文档](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture)描述 Host、Client 与 Server 的职责，但协议接入并不自动完成权限治理。
+
 **差距在哪**：新手把 MCP 等同于“写 API”。高手理解 MCP 是一个协议层抽象——统一了工具发现、参数定义、调用方式和错误处理，让 Agent 能以即插即用的方式扩展能力。面试官考的是你对 Agent 工具生态标准化趋势的理解。
 
 ---
 
 ### Q：大厂开源的 CLI 工具（如 lark-cli）和 MCP 有什么区别？它们跟直接调 API 又有什么不同？
 
-> 来源：大厂 Agent 面试高频题；[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)
+> 来源：大厂 Agent 面试高频题；[百度 AIGC 多模态智能体算法工程师二面](https://www.nowcoder.com/feed/main/detail/2d033fd6daa04e2aaad2282b75531bbc)；[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)
 
 **新手答**：“CLI 就是命令行工具，MCP 就是协议，API 就是接口，三个不同的东西。”
 
@@ -809,7 +811,7 @@ result = agent.invoke({
 
 ### Q：MCP 协议的完整调用过程是怎样的？
 
-> 来源：高德 AI 应用开发实习一面 【腾讯AI应用开发一面追问：领域MCP工具（慢SQL诊断）与Agent系统串联】【唯品会大模型算法实习追问：Tool Schema 以 MCP JSON 注册后，Host、Client 与 Server 背后发生了什么】；[OPPO IT 开发一面](https://www.nowcoder.com/discuss/923561467092160512)【[百度后端一面](https://www.nowcoder.com/discuss/924730985210458112)追问：一次 MCP 调用到底是谁发起、谁执行？；详细讲解一次 MCP 调用背后有哪些步骤。】【[去哪儿AI面试](https://www.nowcoder.com/discuss/924765100441903104)追问：MCP 的客户端和服务端交互的完整流程是怎么样的？中间的具体内容是什么？】【[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)追问：MCP 用过吗？Agent 和 MCP 的交互方式是怎样的？】；[小米--后端--二面](https://www.nowcoder.com/discuss/929769764719775744)；本轮追问：框架如何接入 MCP？（[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)）
+> 来源：高德 AI 应用开发实习一面 【腾讯AI应用开发一面追问：领域MCP工具（慢SQL诊断）与Agent系统串联】【唯品会大模型算法实习追问：Tool Schema 以 MCP JSON 注册后，Host、Client 与 Server 背后发生了什么】；[OPPO IT 开发一面](https://www.nowcoder.com/discuss/923561467092160512)【[百度后端一面](https://www.nowcoder.com/discuss/924730985210458112)追问：一次 MCP 调用到底是谁发起、谁执行？；详细讲解一次 MCP 调用背后有哪些步骤。】【[去哪儿AI面试](https://www.nowcoder.com/discuss/924765100441903104)追问：MCP 的客户端和服务端交互的完整流程是怎么样的？中间的具体内容是什么？】【[拼多多 复活赛 一面](https://www.nowcoder.com/feed/main/detail/2109cf8eb0254507911fbf86bcbf51e4)追问：MCP 用过吗？Agent 和 MCP 的交互方式是怎样的？】；[小米--后端--二面](https://www.nowcoder.com/discuss/929769764719775744)；本轮追问：框架如何接入 MCP？（[字节 aime 一面 9.10](https://www.nowcoder.com/feed/main/detail/ed5e9d17f26e489da94afbf1241b885e)）；[合肥某头部企业软件开发实习生面试问题汇总（时长1个小时）](https://www.nowcoder.com/feed/main/detail/d2c3a96201704d98b060db827c0ca808)
 
 **新手答**：“就是调 API。”
 
@@ -1370,7 +1372,7 @@ flowchart TD
 
 ## Q：没有 MCP 之前大模型调用工具走的是什么流程？MCP 本身有什么缺点或者挑战？
 
-> 来源：淘天/AI Agent一面 【小得盈满一面追问：上下文膨胀、Secret 隔离与工具投毒】；本轮追问：MCP原理是什么？（[九方智投 一面凉经](https://www.nowcoder.com/feed/main/detail/92efed84eb68493d82132e03b7e43ae0)）
+> 来源：淘天/AI Agent一面 【小得盈满一面追问：上下文膨胀、Secret 隔离与工具投毒】；本轮追问：MCP原理是什么？（[九方智投 一面凉经](https://www.nowcoder.com/feed/main/detail/92efed84eb68493d82132e03b7e43ae0)）；[宏图智能一面](https://www.nowcoder.com/discuss/934206754898866176)
 
 **新手答**：“就是 Function Calling，模型输出 JSON 然后调用工具。”
 
@@ -1445,6 +1447,51 @@ CLI 直接调用 LLM 和 Skill 拉起 sub-agent 的取舍，要从五个维度�
 **差距在哪**：新手按“命令、提示词、多个模型”给组件贴标签。高手按控制面、知识规范和推理执行单元划边界，并能从确定性、稳定性、安全、可观测性和成本解释为什么门禁类任务通常偏向 CLI 直调，而开放式评审才可能值得委派给 sub-agent。
 
 
+## Q：Tool-use SFT 的训练目标是什么？基座模型已经具备工具调用能力时，SFT 还需要学习什么？
+
+> 来源：唯品会/NLP算法实习一面；[虾皮agent开发一面](https://www.nowcoder.com/feed/main/detail/4d4b1c6d952942cea43417678fe5ea53)
+
+**新手答**：“让模型学会调用工具。”
+
+**高手答**：
+
+**训练目标的精确定义**：
+
+Tool-use SFT 的训练目标不是笼统的“学会调工具”，而是让模型学会在**正确时机**输出**正确格式**的工具调用指令——包括三个子能力：
+
+1. **选对工具**：从候选工具集中选择最匹配当前意图的工具
+2. **填对参数**：从用户自然语言中精确提取参数并转换为目标格式
+3. **判断时机**：知道什么时候该调工具、什么时候不该调（直接回答更好）
+
+**基座已有 FC 能力时，SFT 还要学什么**：
+
+“能调工具”和“调好工具”是两回事。基座模型的 FC 能力是通用的，SFT 要学的是**业务特化**：
+
+| 学习目标 | 基座模型的现状 | SFT 需要补的 |
+|---------|-------------|-------------|
+| 领域适配 | 认识通用工具名（search、get） | 学习你的业务工具语义（`get_order_status` 不是 `search`） |
+| 调用策略 | 倾向于逐个串行调用 | 学习何时该并行调用、何时不调用直接回答 |
+| 参数推理 | 用户说“查昨天的单”可能不会转换日期 | 从模糊表述中精确提取参数（date=2026-07-21） |
+| 格式对齐 | 训练时学的是 OpenAI 格式 | 对齐你的系统要求的 JSON Schema 格式 |
+| 错误处理 | 工具报错时可能重复调用 | 学习错误时的应对模式（重试、换工具、问用户） |
+| 拒绝调用 | 对所有 query 都倾向调工具 | 学习“这个问题不需要工具，直接回答” |
+
+**SFT 数据构造的关键**：
+
+```text
+训练数据必须覆盖四类场景：
+  1. 正常调用：用户意图明确 → 选对工具 + 填对参数
+  2. 拒绝调用：用户问题不需要工具 → 直接回答
+  3. 多工具串联：复杂任务 → 正确的调用顺序和依赖关系
+  4. 错误恢复：工具返回错误 → 修正参数重试 or 换工具 or 告知用户
+```
+
+**追问补充**：SFT主要监督模型可观察的决策产物：是否调用、调用哪个工具、参数如何构造、如何处理返回结果及最终回复；它不等于强制模型复现唯一的隐含推理链，也不能单靠训练保证工具实际执行成功。执行结果应通过工具反馈、轨迹评测和端到端任务指标验证。
+
+**差距在哪**：新手把 SFT 目标简化为“学会调工具”——这只对完全没有 FC 能力的模型成立。高手理解当基座已有通用 FC 能力时，SFT 的真正价值在于领域适配、策略优化和边界学习。面试官考的是对 SFT 和 base model 能力边界的理解——“能调工具”和“调好工具”是两回事。
+
+---
+
 ## Q：一个 Agent 如何同时连接多个 MCP Server，并保证用户与会话隔离？
 
 > 来源：百度/秋招后端一面【补充：AI 面经中的 MCP 用户身份追问】；本轮追问：如果把该个人助理Agent部署在Web端，做成多用户、多session（一个用户多个会话）的在线平台，如何实现？（[斑头雁（Agent实习生面试一面）](https://www.nowcoder.com/discuss/930139676764102656)）
@@ -1494,49 +1541,6 @@ Web 层可由认证中间件解析用户身份，将请求路由到对应的 ses
 | Streamable HTTP | 2025 年新增的传输方式，支持更灵活的流式通信 | 远程服务场景 |
 
 **差距在哪**：新手把“传输层支持 SSE”等同于“工具结果支持流式”——混淆了两个层次。高手能区分传输层流式和应用层流式，理解 MCP 为什么选择一次性返回，以及实际项目中如何用变通方案解决长耗时问题。面试官想看你是否真正用过 MCP、理解协议设计背后的取舍。
-
----
-
-## Q：Tool-use SFT 的训练目标是什么？基座模型已经具备工具调用能力时，SFT 还需要学习什么？
-
-> 来源：唯品会/NLP算法实习一面
-
-**新手答**：“让模型学会调用工具。”
-
-**高手答**：
-
-**训练目标的精确定义**：
-
-Tool-use SFT 的训练目标不是笼统的“学会调工具”，而是让模型学会在**正确时机**输出**正确格式**的工具调用指令——包括三个子能力：
-
-1. **选对工具**：从候选工具集中选择最匹配当前意图的工具
-2. **填对参数**：从用户自然语言中精确提取参数并转换为目标格式
-3. **判断时机**：知道什么时候该调工具、什么时候不该调（直接回答更好）
-
-**基座已有 FC 能力时，SFT 还要学什么**：
-
-“能调工具”和“调好工具”是两回事。基座模型的 FC 能力是通用的，SFT 要学的是**业务特化**：
-
-| 学习目标 | 基座模型的现状 | SFT 需要补的 |
-|---------|-------------|-------------|
-| 领域适配 | 认识通用工具名（search、get） | 学习你的业务工具语义（`get_order_status` 不是 `search`） |
-| 调用策略 | 倾向于逐个串行调用 | 学习何时该并行调用、何时不调用直接回答 |
-| 参数推理 | 用户说“查昨天的单”可能不会转换日期 | 从模糊表述中精确提取参数（date=2026-07-21） |
-| 格式对齐 | 训练时学的是 OpenAI 格式 | 对齐你的系统要求的 JSON Schema 格式 |
-| 错误处理 | 工具报错时可能重复调用 | 学习错误时的应对模式（重试、换工具、问用户） |
-| 拒绝调用 | 对所有 query 都倾向调工具 | 学习“这个问题不需要工具，直接回答” |
-
-**SFT 数据构造的关键**：
-
-```text
-训练数据必须覆盖四类场景：
-  1. 正常调用：用户意图明确 → 选对工具 + 填对参数
-  2. 拒绝调用：用户问题不需要工具 → 直接回答
-  3. 多工具串联：复杂任务 → 正确的调用顺序和依赖关系
-  4. 错误恢复：工具返回错误 → 修正参数重试 or 换工具 or 告知用户
-```
-
-**差距在哪**：新手把 SFT 目标简化为“学会调工具”——这只对完全没有 FC 能力的模型成立。高手理解当基座已有通用 FC 能力时，SFT 的真正价值在于领域适配、策略优化和边界学习。面试官考的是对 SFT 和 base model 能力边界的理解——“能调工具”和“调好工具”是两回事。
 
 ---
 
