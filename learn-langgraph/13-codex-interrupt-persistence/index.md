@@ -9,6 +9,18 @@ eyebrow: "LangGraph / 13"
 
 发布草稿前要等人工确认，审批可能隔几个小时才回来，服务期间还可能重启。把一个函数阻塞在那里等输入，无法解决这种任务恢复。我们需要保存执行位置，再用同一个任务标识继续。
 
+## 运行准备
+
+在自己新建的练习目录中运行以下命令；本页所有实验代码都已完整展开，可以直接复制保存，不需要下载源码或依赖原始资料目录。
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install "langgraph==1.2.12" "langchain-core>=1.0,<2.0" "pydantic>=2.7.4,<3.0"
+```
+
+建议 Python 3.11 或以上；fish 用户用 `source .venv/bin/activate.fish` 激活。已在前一篇创建环境的读者可以继续使用同一环境。核心版本用于复现实验，其余依赖是范围约束；主练习不需要模型 API Key。
+
 ## 中断需要哪些条件
 
 `interrupt()` 提交待审批数据，checkpointer 保存图状态，`thread_id` 找回对应任务。恢复时传 `Command(resume=...)`，该值会成为中断调用的返回结果。
@@ -25,6 +37,10 @@ flowchart TB
 这是运行生命周期图；外部审批不是图里额外注册的业务节点。
 
 ## 先验证内存中的暂停与继续
+
+### 实验 12：人工审批与恢复 {#experiment-12}
+
+将下面的完整代码保存为 `12_interrupt_resume.py`。各实验分别保存、独立运行，不要把多个实验拼进同一个文件。
 
 ```python
 from typing import TypedDict
@@ -71,29 +87,122 @@ if __name__ == "__main__":
     assert graph.get_state(config).next == ()
 ```
 
+运行：
+
+```bash
+python 12_interrupt_resume.py
+```
+
+预期输出：
+
+```text
+进入审批
+暂停: {'request': '发布草稿'}
+进入审批
+已批准
+```
+
 你会看到“进入审批”打印两次。恢复从 approve 节点开头重新执行，而不是从 Python 调用栈里原地接着往下走。把扣款、发送通知等副作用写在 interrupt 前面，重入时就可能重复发生。
 
 示例检查审批结果必须是 bool；字符串 `"False"` 不是合法的拒绝值。不要用一个宽泛的 try/except 把 interrupt 的控制信号吞掉，也不要随意改变同一节点里多个 interrupt 的调用顺序。
 
 ## 把内存保存换成 SQLite
 
-实验 20 将 saver 换成 `SqliteSaver`，还增加 execute 节点。下列代码是该文件中的关键配置片段，完整文件可从练习索引打开：
-
-```python
-config = {"configurable": {"thread_id": "sqlite-demo"}}
-with SqliteSaver.from_conn_string(str(data_dir / "lesson20.sqlite")) as saver:
-    graph = builder.compile(checkpointer=saver)
-    snapshot = graph.get_state(config)
-```
-
-所有调用都在连接的 with 生命周期内进行。安装可选依赖后，在实验目录分别运行四条命令；每条命令都是一个新的 Python 进程：
+实验 20 将 saver 换成 `SqliteSaver`，还增加 execute 节点。先安装 SQLite 检查点扩展：
 
 ```bash
-python -m pip install -r requirements-sqlite.txt
-python 04_nodes/20_sqlite_resume.py start
-python 04_nodes/20_sqlite_resume.py status
-python 04_nodes/20_sqlite_resume.py resume
-python 04_nodes/20_sqlite_resume.py status
+python -m pip install "langgraph-checkpoint-sqlite==3.1.1"
+```
+
+所有调用都在连接的 with 生命周期内进行，完整代码如下：
+
+### 实验 20：SQLite 跨进程恢复 {#experiment-20}
+
+将下面的完整代码保存为 `20_sqlite_resume.py`。各实验分别保存、独立运行，不要把多个实验拼进同一个文件。
+
+```python
+import os
+import sys
+from pathlib import Path
+from typing import TypedDict
+from langgraph.checkpoint.sqlite import SqliteSaver
+from langgraph.graph import StateGraph, START, END
+from langgraph.types import Command, interrupt
+
+class State(TypedDict):
+    request: str
+    approved: bool
+    result: str
+
+def prepare(state: State) -> dict:
+    return {"request": state["request"].strip()}
+
+def approve(state: State) -> dict:
+    approved = interrupt({"request": state["request"]})
+    if not isinstance(approved, bool):
+        raise ValueError("审批结果必须是 True 或 False")
+    return {"approved": approved}
+
+def execute(state: State) -> dict:
+    return {"result": "模拟发布完成" if state["approved"] else "已取消"}
+
+def finish(state: State) -> dict:
+    return {"result": state["result"] + "。"}
+
+builder = StateGraph(State)
+builder.add_node("prepare", prepare)
+builder.add_node("approve", approve)
+builder.add_node("execute", execute)
+builder.add_node("finish", finish)
+builder.add_edge(START, "prepare")
+builder.add_edge("prepare", "approve")
+builder.add_edge("approve", "execute")
+builder.add_edge("execute", "finish")
+builder.add_edge("finish", END)
+
+def main(mode: str) -> None:
+    data_dir = Path(os.environ.get("LANGGRAPH_LAB_DATA_DIR", ".runtime"))
+    data_dir.mkdir(parents=True, exist_ok=True)
+    config = {"configurable": {"thread_id": "sqlite-demo"}}
+    with SqliteSaver.from_conn_string(str(data_dir / "lesson20.sqlite")) as saver:
+        graph = builder.compile(checkpointer=saver)
+        snapshot = graph.get_state(config)
+        if mode == "start":
+            if snapshot.next:
+                raise SystemExit("已有暂停任务，请先运行 resume。")
+            paused = graph.invoke({"request": " 发布草稿 "}, config)
+            print("已保存暂停点:", paused["__interrupt__"][0].value)
+        elif mode == "resume":
+            if not snapshot.next:
+                raise SystemExit("没有暂停任务，请先运行 start。")
+            result = graph.invoke(Command(resume=True), config)
+            print(result["result"])
+            assert result["result"] == "模拟发布完成。"
+        else:
+            print("待执行:", snapshot.next)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2 or sys.argv[1] not in {"start", "resume", "status"}:
+        raise SystemExit("用法: python 20_sqlite_resume.py start|resume|status")
+    main(sys.argv[1])
+```
+
+在同一目录分别执行以下命令，每条命令都会启动一个新的 Python 进程：
+
+```bash
+python 20_sqlite_resume.py start
+python 20_sqlite_resume.py status
+python 20_sqlite_resume.py resume
+python 20_sqlite_resume.py status
+```
+
+预期输出：
+
+```text
+已保存暂停点: {'request': '发布草稿'}
+待执行: ('approve',)
+模拟发布完成。
+待执行: ()
 ```
 
 预期先看到 `待执行: ('approve',)`，恢复后看到 `模拟发布完成。` 和 `待执行: ()`。这里的发布只是字符串，不会发布网站或发送任何消息。
@@ -116,14 +225,12 @@ python 04_nodes/20_sqlite_resume.py status
 
 将实验 12 的 resume 改为 False，确认得到已拒绝。实验 20 在 start 后先退出终端，再在同一实验目录运行 status 和 resume；重复 start 应拒绝覆盖暂停任务。不要通过删除数据库绕过未审批任务。
 
-## 配套练习
+## 本页实验回顾
 
-运行命令均以 `examples/langgraph-mini-lab` 为当前目录；可点击文件查看完整源码。
-
-| 实验 | 可运行文件 | 观察重点 |
-|---|---|---|
-| 12 | [人工审批与恢复](../../examples/langgraph-mini-lab/03_nodes/12_interrupt_resume.py) | interrupt、Command(resume=...)、checkpointer、同一个 thread_id |
-| 20 | [SQLite 跨进程恢复](../../examples/langgraph-mini-lab/04_nodes/20_sqlite_resume.py) | SqliteSaver 写磁盘；先 start 退出程序，再 resume 恢复同一会话 |
+| 实验 | 已展开的内容 |
+|---|---|
+| 12 | 人工审批与恢复 |
+| 20 | SQLite 跨进程恢复 |
 
 ## 小结
 

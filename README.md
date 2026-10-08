@@ -99,7 +99,7 @@
 | [[codex] 重试策略与业务幂等](learn-langgraph/14-codex-retry-idempotency/index.html) | 通过提交后超时实验理解重复执行与唯一键 |
 | [[codex] 子图封装与结构化校验](learn-langgraph/15-codex-subgraphs-validation/index.html) | 设计子图数据边界并为输出修复设置终止条件 |
 
-新增文章配套 [21 个主练习与 1 个真实模型选学例子](examples/langgraph-mini-lab/index.html)，按预测、运行、修改、解释的顺序练习。
+新增文章已在页面中完整展开 21 个主练习与 1 个真实模型选学例子的代码、运行命令和预期结果，按预测、运行、修改、解释的顺序练习，无需下载配套源码。
 
 ### SDK 框架
 

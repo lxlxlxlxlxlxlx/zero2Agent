@@ -9,18 +9,77 @@ eyebrow: "LangGraph / 14"
 
 调用超时后重试一次，看起来能提高成功率。但如果数据库已经提交，只是响应丢了，第二次调用就可能重复写入。重试解决临时失败，幂等解决重复执行造成的业务后果，这两件事必须一起设计。
 
+## 运行准备
+
+在自己新建的练习目录中运行以下命令；本页所有实验代码都已完整展开，可以直接复制保存，不需要下载源码或依赖原始资料目录。
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install "langgraph==1.2.12" "langchain-core>=1.0,<2.0" "pydantic>=2.7.4,<3.0"
+```
+
+建议 Python 3.11 或以上；fish 用户用 `source .venv/bin/activate.fish` 激活。已在前一篇创建环境的读者可以继续使用同一环境。核心版本用于复现实验，其余依赖是范围约束；主练习不需要模型 API Key。
+
 ## 先限制哪些错误值得重试
 
-实验 07 第一次 fetch 抛出 TimeoutError，第二次成功。策略明确指定异常类型与总尝试次数：
+实验 07 第一次 fetch 抛出 TimeoutError，第二次成功。下面的完整示例明确指定异常类型与总尝试次数：
+
+### 实验 07：节点自动重试 {#experiment-07}
+
+将下面的完整代码保存为 `07_retry.py`。各实验分别保存、独立运行，不要把多个实验拼进同一个文件。
 
 ```python
+from itertools import count
+from typing import TypedDict
+from langgraph.graph import StateGraph, START, END
+from langgraph.types import RetryPolicy
+
+class State(TypedDict):
+    value: int
+    report: str
+
+attempts = count(1)
+
+def fetch(state: State) -> dict:
+    attempt = next(attempts)
+    print(f"尝试 {attempt}")
+    if attempt == 1:
+        raise TimeoutError("模拟第一次调用超时")
+    return {"value": 7}
+
+def finish(state: State) -> dict:
+    return {"report": f"结果: {state['value']}"}
+
 policy = RetryPolicy(
-    max_attempts=2,
-    retry_on=TimeoutError,
-    initial_interval=0,
-    jitter=False,
+    max_attempts=2, retry_on=TimeoutError, initial_interval=0, jitter=False
 )
+builder = StateGraph(State)
 builder.add_node("fetch", fetch, retry_policy=policy)
+builder.add_node("finish", finish)
+builder.add_edge(START, "fetch")
+builder.add_edge("fetch", "finish")
+builder.add_edge("finish", END)
+graph = builder.compile()
+
+if __name__ == "__main__":
+    result = graph.invoke({"value": 0})
+    print(result["report"])
+    assert result["value"] == 7
+```
+
+运行：
+
+```bash
+python 07_retry.py
+```
+
+预期输出：
+
+```text
+尝试 1
+尝试 2
+结果: 7
 ```
 
 `max_attempts=2` 包含首次执行，不是失败后再执行两次。例子把等待设为 0 是为了快速观察；真实依赖应使用适当退避、超时和总预算。鉴权失败、参数错误通常需要修正原因，不能一律重试。
@@ -28,6 +87,10 @@ builder.add_node("fetch", fetch, retry_policy=policy)
 实验里的计数器只负责模拟先失败后成功，在进程重启后不会保留；它不是可靠的业务尝试记录。
 
 ## 完整示例：提交成功后模拟超时
+
+### 实验 21：重试时避免重复写入 {#experiment-21}
+
+将下面的完整代码保存为 `21_idempotency.py`。各实验分别保存、独立运行，不要把多个实验拼进同一个文件。
 
 ```python
 import sqlite3
@@ -91,6 +154,20 @@ if __name__ == "__main__":
         connection.close()
 ```
 
+运行：
+
+```bash
+python 21_idempotency.py
+```
+
+预期输出：
+
+```text
+写入尝试: 1
+写入尝试: 2
+数据库记录: 1
+```
+
 输出里有两次写入尝试，但数据库只有一条记录。第一次 INSERT 和 commit 已成功，随后抛出超时；第二次使用相同业务键 job-1，唯一约束和 `ON CONFLICT DO NOTHING` 让插入变成无操作。
 
 ## 真正起作用的是稳定的业务键
@@ -111,14 +188,12 @@ checkpoint 记录的是图的执行状态，外部系统提交有自己的事务
 
 先运行 07 和 21。将实验 07 的 max_attempts 改成 1，确认首次超时直接失败。再在实验 21 中去掉 `ON CONFLICT`，保留主键，第二次插入应出现唯一键冲突；这说明冲突是业务重复的证据，不能把它当作新的临时网络故障无限重试。
 
-## 配套练习
+## 本页实验回顾
 
-运行命令均以 `examples/langgraph-mini-lab` 为当前目录；可点击文件查看完整源码。
-
-| 实验 | 可运行文件 | 观察重点 |
-|---|---|---|
-| 07 | [节点自动重试](../../examples/langgraph-mini-lab/02_nodes/07_retry.py) | RetryPolicy 只重试指定异常；max_attempts 包含首次执行 |
-| 21 | [重试时避免重复写入](../../examples/langgraph-mini-lab/04_nodes/21_idempotency.py) | 同一业务 id + 数据库唯一约束，让重复尝试只产生一条记录 |
+| 实验 | 已展开的内容 |
+|---|---|
+| 07 | 节点自动重试 |
+| 21 | 重试时避免重复写入 |
 
 ## 小结
 
