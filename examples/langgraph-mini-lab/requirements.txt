@@ -1,0 +1,5 @@
+# 主练习：仅安装依赖时需要网络，安装后不调用外部服务。
+# 固定 LangGraph 核心版本，其余依赖由 pip 解析；这不是完整 lock 文件。
+langgraph==1.2.12
+langchain-core>=1.0,<2.0
+pydantic>=2.7.4,<3.0

@@ -34,9 +34,7 @@ graph.add_edge("fetch_input", "node_b")
 graph.add_edge("fetch_input", "node_c")
 
 # 三个节点都指向汇聚节点
-graph.add_edge("node_a", "aggregate")
-graph.add_edge("node_b", "aggregate")
-graph.add_edge("node_c", "aggregate")
+graph.add_edge(["node_a", "node_b", "node_c"], "aggregate")
 ```
 
 LangGraph 会自动检测到 `node_a`、`node_b`、`node_c` 可以同时执行，并行运行它们。
@@ -172,9 +170,7 @@ graph.add_edge("start", "bowling")
 graph.add_edge("start", "fielding")
 
 # Fan-in：三个节点都汇入 aggregate
-graph.add_edge("batting", "aggregate")
-graph.add_edge("bowling", "aggregate")
-graph.add_edge("fielding", "aggregate")
+graph.add_edge(["batting", "bowling", "fielding"], "aggregate")
 
 graph.add_edge("aggregate", END)
 
@@ -202,9 +198,9 @@ print(result["final_report"])
 === Virat Kohli 综合评估报告 ===
   [击球] 平均分 59.8，评级：世界级
   [防守] 评分 9.0/10，评级：出色
-  [投球] 平均分 34.0，评级：优秀
+  [投球] 平均分 34.0，评级：一般
 
-综合得分：82.6 / 100
+综合得分：64.0 / 100
 ```
 
 注意：三个分析的顺序可能不同（因为是并行执行），但 `analyses` 列表会把它们全部收集进来。
@@ -227,8 +223,7 @@ graph.add_conditional_edges(
 # 详细分析再 Fan-out 到多个子节点
 graph.add_edge("detailed_analysis", "sub_a")
 graph.add_edge("detailed_analysis", "sub_b")
-graph.add_edge("sub_a", "merge")
-graph.add_edge("sub_b", "merge")
+graph.add_edge(["sub_a", "sub_b"], "merge")
 ```
 
 ## 并行执行的注意点
@@ -243,12 +238,12 @@ graph.add_edge("sub_b", "merge")
 
 **3. 对于普通（非 Annotated）字段**
 
-如果多个并行节点都修改同一个普通字段，最后一个完成的节点会覆盖前面的。一般来说并行节点应该各自负责不同的字段。
+如果同一超步的多个并行节点都修改同一个没有 reducer 的普通字段，会触发并发更新冲突，不能依赖最后写入覆盖。并行分支应分别负责不同字段，或为共享字段定义合并规则。完整实验见 [[codex] 异步并行、汇合屏障与 Send](../11-codex-parallel-send/index.html)。
 
 ## 小结
 
 - Fan-out：从一个节点出发，用多个 `add_edge` 同时触发多个节点
-- Fan-in：多个节点都用 `add_edge` 指向同一个汇聚节点
+- Fan-in：用 `add_edge([分支节点列表], 汇聚节点)` 明确等待所有固定分支
 - 并行结果用 `Annotated[List[T], operator.add]` 收集
 - LangGraph 自动检测并行机会，不需要手动管理线程
 

@@ -308,6 +308,8 @@ hf_token = os.environ["HUGGINGFACEHUB_API_TOKEN"]
 - LLM 对象在图外部初始化，节点函数闭包引用
 - 生产代码记得加重试和错误处理
 
-到这里，LangGraph 的核心模式都覆盖到了：顺序图、条件分支、并行执行、Prompt Chaining、LLM 集成。
+到这里，已经了解顺序图、条件分支、并行执行、Prompt Chaining 和 LLM 集成。接下来通过最小实验补齐状态合并、工具循环、检查点恢复和幂等设计。
 
-接下来可以去看 [OpenClaw 模块](../../learn-openclaw/index.html) 或 [Claude Code 模块](../../learn-claude-code/index.html)，把 LangGraph 和手写框架的思路结合起来。
+下一篇建议继续看：
+
+- [[codex] 最小实验：State、Reducer 与状态流](../08-codex-state-reducers-stream/index.html)

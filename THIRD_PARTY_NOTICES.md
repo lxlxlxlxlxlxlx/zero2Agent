@@ -141,3 +141,11 @@ The incremental answers from the September 23 through October 7 interview review
 
 
 No upstream prose, code, figures, or datasets are reproduced. Protocol and implementation facts are attributed at the relevant answer; architecture, evaluation, and operational recommendations are independent engineering analysis. Public interview links document question provenance only.
+
+## LangGraph codex Mini Lab (2026-10-08)
+
+The eight articles numbered 08–15 adapt the user-supplied `langgraph_mini_lab` learning package (dated 2026-10-05). The 21 main exercises, optional real-model exercise, manifest, syntax checker, and existing exercise runner are included under `examples/langgraph-mini-lab`. The surrounding tutorial prose, reading order, and integration with zero2Agent are newly written. No private runtime data, local credentials, or generated validation logs are included.
+
+API semantics were checked against the official [Graph API](https://docs.langchain.com/oss/python/langgraph/graph-api), [Graph API usage](https://docs.langchain.com/oss/python/langgraph/use-graph-api), [Streaming](https://docs.langchain.com/oss/python/langgraph/streaming), [Memory](https://docs.langchain.com/oss/python/langgraph/add-memory), [Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts), [Persistence](https://docs.langchain.com/oss/python/langgraph/persistence), [Subgraphs](https://docs.langchain.com/oss/python/langgraph/use-subgraphs), [Workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents), and [Pydantic Fields](https://docs.pydantic.dev/latest/concepts/fields/) documentation. These links describe their current APIs; the exercise baseline remains LangGraph 1.2.12 and SQLite Checkpointer 3.1.1, with the default v1 stream-mode output format. No official tutorial prose or diagrams are reproduced.
+
+The source package originally reported static-only validation. The repository adaptation records its own execution scope in the lab landing page; real-model compatibility and production guarantees are not inferred from deterministic exercise results.

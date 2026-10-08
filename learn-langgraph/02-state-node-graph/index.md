@@ -41,7 +41,7 @@ class MyState(TypedDict):
     error: Optional[str]
 ```
 
-`TypedDict` 是 Python 标准库里的类型，让字典有了类型检查。LangGraph 用它来追踪状态的结构。
+`TypedDict` 为静态类型检查器描述字典结构，LangGraph 也用它读取状态 schema；它不会自动创建字段或在运行时校验普通字典的值。
 
 ### 节点返回 dict，不是完整 State
 
@@ -101,7 +101,7 @@ def node_name(state: YourState) -> dict:
 # 正确
 return {"field_a": value_a, "field_b": value_b}
 
-# 错误——不要返回完整 state
+# 不推荐：包含 reducer 字段时，返回旧值可能导致重复合并
 return state
 ```
 
@@ -207,7 +207,7 @@ print("摘要:", result["summary"])
 
 ```
 清理后: LangGraph 是一个用于构建有状态 Agent 应用的框架，基于图结构描述执行流。
-词数: 17
+词数: 4
 摘要: LangGraph 是一个用于构建有状态 Agent 应用的框架，基于图结构描述执行流。
 ```
 
@@ -244,7 +244,7 @@ print(app.get_graph().draw_ascii())
 - **Graph** 是流程，把节点用边连起来，`compile()` 后可运行
 
 记住这三条规则：
-1. 节点只返回要修改的字段（dict），不返回完整 state
+1. 节点优先返回要修改字段的增量，避免 reducer 重复合并已有值
 2. 边决定执行顺序，`END` 是终止信号
 3. `invoke` 传入的是初始 state（dict），返回的是最终 state（dict）
 

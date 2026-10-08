@@ -47,7 +47,7 @@
 | 模块 | 文章数 | 状态 | 内容 |
 |------|--------|------|------|
 | [Agent Basic](https://onefly.top/zero2Agent/learn-agent-basic/) | 17 篇 | ✅ 完成 | Agent 核心概念、模型 API、Tool Calling、Context、Memory、Loop 与 Infra |
-| [LangGraph](https://onefly.top/zero2Agent/learn-langgraph/) | 7 篇 | ✅ 完成 | StateGraph 三件套、条件分支、并行 Fan-out/Fan-in、Prompt Chaining、LLM 集成 |
+| [LangGraph](https://onefly.top/zero2Agent/learn-langgraph/) | 15 篇 | ✅ 完成 | 图基础与 8 篇 [codex] 实验教程：状态合并、工具闭环、记忆、恢复、幂等、动态分发 |
 | [SDK 框架](https://onefly.top/zero2Agent/learn-sdk-frameworks/) | 4 篇 | ✅ 完成 | OpenAI Agents SDK · Google genai SDK · Claude Anthropic SDK · 三大 SDK 横向对比 |
 | [框架调研](https://onefly.top/zero2Agent/learn-agent-survey/) | 13 篇 | ✅ 完成 | AgentScope · Mastra · Semantic Kernel · Eino · DeerFlow · LangChain · Google ADK · AutoGen · Vercel AI SDK 等 |
 | [OpenClaw Agent](https://onefly.top/zero2Agent/learn-openclaw/) | 9 篇 | ✅ 完成 | 60 行核心框架，从 Node 推导到 Agent，pi-mono 架构解析，部署实战 |
@@ -60,7 +60,7 @@
 | [面试通关](https://onefly.top/zero2Agent/learn-agent-interview/) | 17 篇 | ✅ 完成 | 大厂 AI Agent 岗位高频面试题拆解，17 大考察维度，新手答 vs 高手答对比 |
 | [Final Project](https://onefly.top/zero2Agent/final-project/) | 12 篇 | ✅ 完成 | OfferPilot 面试诊断 Agent 实战：手写 Harness 10 层架构，从 PRD 到部署 |
 
-> **当前进度：131 篇文章，12 个完整模块，1 个模块持续更新**
+> **当前进度：139 篇文章，12 个完整模块，1 个模块持续更新**
 
 ---
 
@@ -90,6 +90,16 @@
 | 并行执行 | Fan-out / Fan-in，多节点并发 |
 | Prompt Chaining | 分步生成，节点间传递中间结果 |
 | LLM 集成 | OpenAI / HuggingFace 在节点里的完整写法 |
+| [[codex] 最小实验：State、Reducer 与状态流](learn-langgraph/08-codex-state-reducers-stream/index.html) | 用四个双节点实验看清状态更新、消息替换和流式输出 |
+| [[codex] State、Context 与跨会话记忆](learn-langgraph/09-codex-context-memory/index.html) | 分清会话状态、运行依赖和跨线程记忆的生命周期 |
+| [[codex] 条件路由、循环与 Command](learn-langgraph/10-codex-routing-loops/index.html) | 用退出条件和显式路由控制图的下一步 |
+| [[codex] 异步并行、汇合屏障与 Send](learn-langgraph/11-codex-parallel-send/index.html) | 从固定分支走到动态任务分发并验证汇总结果 |
+| [[codex] 工具闭环与模型上下文](learn-langgraph/12-codex-tool-loop/index.html) | 先验证真实工具执行再替换模型决策节点 |
+| [[codex] 人工审批与跨进程恢复](learn-langgraph/13-codex-interrupt-persistence/index.html) | 从内存中断到 SQLite 保存与恢复暂停任务 |
+| [[codex] 重试策略与业务幂等](learn-langgraph/14-codex-retry-idempotency/index.html) | 通过提交后超时实验理解重复执行与唯一键 |
+| [[codex] 子图封装与结构化校验](learn-langgraph/15-codex-subgraphs-validation/index.html) | 设计子图数据边界并为输出修复设置终止条件 |
+
+新增文章配套 [21 个主练习与 1 个真实模型选学例子](examples/langgraph-mini-lab/index.html)，按预测、运行、修改、解释的顺序练习。
 
 ### SDK 框架
 
@@ -229,9 +239,10 @@ zero2Agent/
 │   ├── css/docs.css        # 三栏布局样式
 │   └── js/app.js           # 侧边栏 + TOC + Mermaid
 ├── examples/
-│   └── agent-api-lab/      # 无密钥 API 协议、上下文消融和故障注入实验
+│   ├── agent-api-lab/      # 无密钥 API 协议、上下文消融和故障注入实验
+│   └── langgraph-mini-lab/ # 21 个主练习与 1 个真实模型选学例子
 ├── learn-agent-basic/      # Agent 基础概念（17 篇）
-├── learn-langgraph/        # LangGraph（7 篇）
+├── learn-langgraph/        # LangGraph（15 篇）
 ├── learn-sdk-frameworks/   # 三大原厂 SDK（4 篇）
 ├── learn-agent-survey/     # 框架调研（13 篇）
 ├── learn-openclaw/         # OpenClaw 框架教程（9 篇）
