@@ -13,6 +13,7 @@ include:
   - learn-agent-basic
   - learn-openclaw
   - learn-langgraph
+  - learn-langgraph-lab
   - learn-claude-code
   - learn-sdk-frameworks
   - learn-agent-survey
@@ -24,6 +25,7 @@ include:
   - docs
 
 exclude:
+  - learn-langgraph-lab/AGENTS.md
   - README.md
   - requirements.txt
   - .gitignore

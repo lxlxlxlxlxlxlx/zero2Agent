@@ -108,8 +108,9 @@
                 </a>
                 <nav class="doc-nav">
                     {% for module in site.data.nav.modules %}
+                    {% assign module_path = "/" | append: module.slug | append: "/" %}
                     <a href="{{ site.baseurl }}/{{ module.slug }}/index.html"
-                       {% if page.url contains module.slug %}class="is-active"{% endif %}
+                       {% if page.url contains module_path %}class="is-active"{% endif %}
                        title="{{ module.title }}">
                         {{ module.short_title | default: module.title }}
                     </a>
@@ -143,7 +144,8 @@
             <aside class="doc-sidebar">
                 <p class="sidebar-label">Learning Map</p>
                 {% for module in site.data.nav.modules %}
-                <div class="nav-module{% if page.url contains module.slug %} is-open{% endif %}">
+                {% assign module_path = "/" | append: module.slug | append: "/" %}
+                <div class="nav-module{% if page.url contains module_path %} is-open{% endif %}">
                     <div class="nav-module-row">
                         {% if module.articles.size > 0 %}
                         <button class="nav-toggle-btn" type="button" aria-label="展开">
@@ -155,7 +157,7 @@
                         <span class="nav-toggle-gap"></span>
                         {% endif %}
                         <a href="{{ site.baseurl }}/{{ module.slug }}/index.html"
-                           class="nav-module-link{% if page.url contains module.slug %} is-active{% endif %}">
+                           class="nav-module-link{% if page.url contains module_path %} is-active{% endif %}">
                             {{ module.title }}
                         </a>
                     </div>
@@ -163,8 +165,9 @@
                     <div class="nav-articles">
                         {% for article in module.articles %}
                         {% assign article_path = module.slug | append: '/' | append: article.slug %}
+                        {% assign article_url = '/' | append: article_path | append: '/' %}
                         <a href="{{ site.baseurl }}/{{ article_path }}/index.html"
-                           class="nav-article{% if page.url contains article.slug %} is-current{% endif %}">
+                           class="nav-article{% if page.url contains article_url %} is-current{% endif %}">
                             {{ article.title }}
                         </a>
                         {% endfor %}

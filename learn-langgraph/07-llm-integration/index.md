@@ -312,4 +312,4 @@ hf_token = os.environ["HUGGINGFACEHUB_API_TOKEN"]
 
 下一篇建议继续看：
 
-- [[codex] 最小实验：State、Reducer 与状态流](../08-codex-state-reducers-stream/index.html)
+- [LangGraph 实验课：State 的局部更新](../../learn-langgraph-lab/01-state-updates/index.html)

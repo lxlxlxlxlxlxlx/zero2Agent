@@ -1,7 +1,7 @@
 ---
 layout: default
 title: learn-langgraph
-description: 从图基础到 codex 最小实验，练习工具闭环、记忆、恢复与幂等
+description: 用七篇基础教程理解状态图、条件分支、并行执行与模型接入
 eyebrow: Module 02
 ---
 
@@ -24,22 +24,14 @@ LangGraph 用**图结构**来描述 Agent 的执行逻辑：节点是操作，�
 | 05 | [并行执行：Fan-out / Fan-in](05-parallel-workflows/index.html) | 多节点同时启动，汇聚节点，cricket 统计实战 |
 | 06 | [Prompt Chaining：分步生成](06-prompt-chaining/index.html) | 拆解生成任务，节点间传递中间结果，HuggingFace 集成 |
 | 07 | [接入 LLM：OpenAI 与 HuggingFace](07-llm-integration/index.html) | ChatOpenAI，HuggingFaceEndpoint，在节点里调用模型 |
-| 08 | [[codex] 最小实验：State、Reducer 与状态流](08-codex-state-reducers-stream/index.html) | 用四个双节点实验看清状态更新、消息替换和流式输出 |
-| 09 | [[codex] State、Context 与跨会话记忆](09-codex-context-memory/index.html) | 分清会话状态、运行依赖和跨线程记忆的生命周期 |
-| 10 | [[codex] 条件路由、循环与 Command](10-codex-routing-loops/index.html) | 用退出条件和显式路由控制图的下一步 |
-| 11 | [[codex] 异步并行、汇合屏障与 Send](11-codex-parallel-send/index.html) | 从固定分支走到动态任务分发并验证汇总结果 |
-| 12 | [[codex] 工具闭环与模型上下文](12-codex-tool-loop/index.html) | 先验证真实工具执行再替换模型决策节点 |
-| 13 | [[codex] 人工审批与跨进程恢复](13-codex-interrupt-persistence/index.html) | 从内存中断到 SQLite 保存与恢复暂停任务 |
-| 14 | [[codex] 重试策略与业务幂等](14-codex-retry-idempotency/index.html) | 通过提交后超时实验理解重复执行与唯一键 |
-| 15 | [[codex] 子图封装与结构化校验](15-codex-subgraphs-validation/index.html) | 设计子图数据边界并为输出修复设置终止条件 |
 
 </div>
 
 ## 建议阅读顺序
 
-01–07 是原有基础教程；08–15 是标题带 `[codex]` 的实战补充，按状态更新、数据生命周期、路由、并行、工具循环、恢复、幂等与封装逐步深入。
+按 01–07 顺序阅读，先理解图的三个核心概念，再练习顺序、分支、并行与模型接入。
 
-先读 [08：最小实验](08-codex-state-reducers-stream/index.html) 建立运行环境。文章内的实验编号沿用练习包 01–22，与文章编号不同。每课先预测状态，再运行，再只改一个变量；22 个实验的完整代码、运行命令和预期结果均直接展开在对应文章中，可以复制到自己的练习目录运行，不依赖原始资料目录。
+想用小例子逐项验证机制，继续学习独立的 [LangGraph 实验课](../learn-langgraph-lab/index.html)。22 节课程按一个知识点一份完整代码组织。
 
 ## 前置知识
 
